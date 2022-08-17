@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocs_chasoft_net=self.webpackChunkdocs_chasoft_net||[]).push([[9590],{5006:s=>{s.exports=JSON.parse('{"label":"docusaurus","permalink":"/docs.chasoft.net/vi/blog/tags/docusaurus","allTagsPath":"/docs.chasoft.net/vi/blog/tags","count":4}')}}]);
