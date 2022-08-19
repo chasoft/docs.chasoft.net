@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs_chasoft_net=self.webpackChunkdocs_chasoft_net||[]).push([[7883],{5715:t=>{t.exports=JSON.parse('{"permalink":"/blog/tags/product","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
