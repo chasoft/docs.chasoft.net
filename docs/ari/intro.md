@@ -2,9 +2,9 @@
 sidebar_position: 1
 ---
 
-# Welcome
+# Introduction
 
-Welcome to the documentation of Chasoft Labs
+Introduction about Ari
 
 ## Getting Started
 

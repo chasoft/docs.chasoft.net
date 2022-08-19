@@ -1,8 +1,9 @@
 ---
-slug: welcome
-title: Welcome
-authors: [slorber, yangshun]
-tags: [facebook, hello, docusaurus]
+slug: ari-your-powerful-serverless-personal-website
+title: Ari - Serverless Personal Website
+authors: [brian]
+tags: [website, product, serverless]
+date: 2022-08-20T11:00
 ---
 
 [Docusaurus blogging features](https://docusaurus.io/docs/blog) are powered by the [blog plugin](https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-blog).
@@ -10,6 +11,8 @@ tags: [facebook, hello, docusaurus]
 Simply add Markdown files (or folders) to the `blog` directory.
 
 Regular blog authors can be added to `authors.yml`.
+
+<!--truncate-->
 
 The blog post date can be extracted from filenames, such as:
 
