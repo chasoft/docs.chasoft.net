@@ -1,10 +1,10 @@
 ---
-sidebar_position: 30
+sidebar_position: 31
 ---
 
 # FAQs
 
-Frequently asked questions about **`Ari`**
+Frequently asked questions about Chasoft Labs and its products/services.
 
 <details>
 <summary>Question 1</summary>

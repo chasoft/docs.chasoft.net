@@ -27,6 +27,6 @@ And everything would be executed automatically. Everytime you update your github
 * Vercel
 * Any Express server
 
-but for the very first version of **Ari** _(1.x)_, we only support to deploy to **`Cloudflare Pages`**. The reason is that **Ari** (1.x) focus on `standalone spirit` and `effordable spirit`. You would have a powerful serverless website for `FREE` when deploy to `Cloudflare Pages`
+but for the very first version of **Ari** _(1.x)_, we only support to deploy to **`Cloudflare Pages`**. The reason is that **Ari** (1.x) focus on `standalone spirit` and `effordable spirit`. You would have a powerful Serverless Personal Website for `FREE` when deploy to `Cloudflare Pages`
 
 :::
