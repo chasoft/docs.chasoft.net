@@ -89,4 +89,4 @@ Let's start your online presence today.
 
 If you find issues with the documentation or have suggestions on how to improve the documentation or the project in general, please [file an issue](https://github.com/chasoft/docs.chasoft.net) for us, or send a tweet mentioning the [@vBizChain](https://twitter.com/vBizChain) Twitter account.
 
-For new feature requests, you can create a post on our [feature requests board (Canny)](/feature-requests), which is a handy tool for road-mapping and allows for sorting by upvotes, which gives the core team a better indicator of what features are in high demand, as compared to GitHub issues which are harder to triage. Refrain from making a Pull Request for new features (especially large ones) as someone might already be working on it or will be part of our roadmap. Talk to us first!
+For new feature requests, you can create a [new issue](https://github.com/chasoft/docs.chasoft.net/issues/new/choose), which is a handy tool to track todos, bugs, feature requests, and more. As issues are created, they'll appear here in a searchable and filterable list.
