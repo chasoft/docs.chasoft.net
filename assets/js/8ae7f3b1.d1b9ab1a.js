@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs_chasoft_net=self.webpackChunkdocs_chasoft_net||[]).push([[9212],{8429:e=>{e.exports=JSON.parse('{"title":"Guides","slug":"/category/guides","permalink":"/docs/category/guides","navigation":{"previous":{"title":"TypeScript","permalink":"/docs/ari/getting-started/typescript"},"next":{"title":"Pages","permalink":"/docs/pages"}}}')}}]);
