@@ -7,9 +7,9 @@ import TabItem from '@theme/TabItem';
 
 # Blog
 
-Great features for your writing. Now you have a **full features blog system**. You write blog posts and classify them into `categories`, `tags`, `languages`. Each post can be connected by `relatedPosts`, `nextPost` or `previousPost`.
+The blog feature enables you to deploy a **full-featured** blog in no time. You write blog posts and classify them into `categories`, `tags`, `languages`. Each post can be connected by `relatedPosts`, `nextPost` or `previousPost`.
 
-All blog posts are stored at **`app\routes\__layout\blog\__mdx\`** and metaData are declared in **`app\data\blog.server.ts`**
+All blog posts are stored at **`app\routes\__layout\blog\__mdx\`** and meta-data declared in **`app\data\blog.server.ts`**
 
 ```ts title="blog posts location"
 my-website
@@ -25,26 +25,51 @@ my-website
 │
 ```
 
-```ts title="app\data\blog.server.ts"
-...
-//import your blog posts
-import * as P0001 from "~/routes/__layout/blog/__mdx/your-blog-post-1.mdx"
-...
-//extract meta data
-const data = [
-  getMdxBlogMeta(P0001),
-  ...
-]
-```
-
 ## Process to create a new blog post
 
 To add a new blog post, you need to process 2 steps
 
-1. Create a blog post `.mdx` at `app\routes\__layout\blog\__mdx\`
+1. For example, create a file at `app\routes\__layout\blog\__mdx\your-blog-post-filename.mdx`
+
+  the file name **`your-blog-post-filename.mdx`** file will be the slug of the blog post
+
+  ```
+  my-website
+  ├── app
+  │   └── routes
+  │       └── __layout
+  │           └── blog
+  │               └── __mdx
+  │                   ├── your-blog-post-filename.mdx
+  │                   └── ...
+  ```
+
+  <BrowserWindow
+    url={
+      <span>
+        https://your-domain.com/blog/
+        <span style={{ fontWeight: "bold" }}>your-blog-post-filename</span>
+      </span>
+    }
+  >
+
+  your blog post
+
+  </BrowserWindow>
+
 2. Declare your new blog post at `app\data\blog.server.ts`
 
-Simple, heh?
+  ```ts title="app\data\blog.server.ts"
+  ...
+  //import your blog posts
+  import * as P0001 from "~/routes/__layout/blog/__mdx/your-blog-post-filename.mdx"
+  ...
+  //extract meta data
+  const data = [
+    getMdxBlogMeta(P0001),
+    ...
+  ]
+  ```
 
 ## Format of a blog post `.mdx`
 
@@ -314,3 +339,63 @@ When she reached the first hills of the Italic Mountains, she had a last view ba
 
 </TabItem>
 </Tabs>
+
+:::info
+
+- Root folder of `BlogPostMeta.attributes.properties.images`, when you say `/placeholder.svg`. It means the file `placeholder.svg` is in `/img/blog/` folder _(or `URL.BLOG_FOLDER`)_.
+
+- Root folder of `BlogPostMeta.attributes.properties.pageHeaderMeta.featuredImage`, when you say `/placeholder.svg`. It means the file `placeholder.svg` is in `/img/blog/` folder _(or `URL.BLOG_FOLDER`)_.
+
+:::
+
+## Tags
+
+Tag can have a background image which can be declared in `app\data\settings\categoriesAndTagsProperties.ts`
+
+<Tabs>
+<TabItem value="Settings">
+
+```ts
+export const catsTags: CatsTags = {
+	"Microsoft": {
+		imageUrl: "/placeholder.svg",
+	},
+	"MSI": {
+		imageUrl: "/placeholder.svg",
+	},
+}
+```
+
+</TabItem>
+<TabItem value="Screenshots">
+
+<div style={{textAlign: 'center'}}>
+
+![tags with background](./img/tag-backgrounds.webp)
+
+</div>
+
+</TabItem>
+</Tabs>
+
+:::info
+
+Root folder is `/img/background/`, when you say `/placeholder.svg`. It means the file `placeholder.svg` is in `/img/background/` folder _(or `URL.BACKGROUND_FOLDER`)_.
+
+:::
+
+## Video tutorial
+
+```mdx-code-block
+import LiteYouTubeEmbed from 'react-lite-youtube-embed';
+
+<div className="video-container">
+  <LiteYouTubeEmbed
+    id="X8T4qx_VO50"
+    playlist={false}
+    title="Create a blog post and configure it"
+    poster="hqdefault"
+    noCookie={true}
+  />
+</div>
+```

@@ -7,16 +7,16 @@ sidebar_position: 30
 Frequently asked questions about **`Ari`**
 
 <details>
-<summary>Question 1</summary>
+<summary>What is “what's new” information central?</summary>
 
-Answer 1
+...
 
 </details>
 
 <details>
 <summary>Question 2</summary>
 
-Answer 2
+Answer 2 
 
 </details>
 

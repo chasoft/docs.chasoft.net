@@ -4,11 +4,11 @@ sidebar_position: 60
 
 # Internationalization (i18n)
 
-Ari supports multiple languages and it has its own mechanism for internationalization.
+Ari supports multiple languages, and it has its mechanism for internationalization.
 
 ## Config languages
 
-Following example is to support 2 languages English (en) and Vietnamese (vi). Feel free to update `config.tsx` to match your desired languages.
+The following example is to support 2 languages, English (en) and Vietnamese (vi). Please don't hesitate to update `config.tsx` to match your desired languages.
 
 ```ts title="/app/data/settings/config.tsx"
 /******************************************************************************
@@ -28,7 +28,7 @@ export const CURRENCY: Record<Language, string> = {
 
 ## Languages sample structure
 
-Take a look at folder `app/languages` for more details. The simplest way to create a language file is to duplicate existing language files
+Take a look at folder `app/languages` for more details. The simplest way to create a language file is to duplicate existing language files.
 
 ```ts title="/app/languages/languageSwitcherLangTable.ts"
 import type { Language } from "~/data/settings/config"
@@ -103,7 +103,7 @@ And if you do anything wrong, the typescript would alert with incorrect content.
 
 There are two cases:
 
-1. You are using a content block. For example
+1. You are using a content block. For example,
 
   ```tsx
   <FaqsBlock
@@ -112,7 +112,7 @@ There are two cases:
   />
   ```
 
-2. Or you are updating an react component.
+2. Or you are updating a React component.
 
   ```tsx
   import useTranslate from "~/utils/useTranslate"
@@ -126,3 +126,20 @@ There are two cases:
   ```
 
   For more details about using `useTranslate`, take a look at [useTranslate](../advanced-guides/useTranslate).
+
+  
+## Video tutorial
+
+```mdx-code-block
+import LiteYouTubeEmbed from 'react-lite-youtube-embed';
+
+<div className="video-container">
+  <LiteYouTubeEmbed
+    id="X8T4qx_VO50"
+    playlist={false}
+    title="Introduction about multi-languages feature"
+    poster="hqdefault"
+    noCookie={true}
+  />
+</div>
+```

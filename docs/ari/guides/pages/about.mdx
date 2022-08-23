@@ -7,9 +7,43 @@ import TabItem from '@theme/TabItem';
 
 # About
 
-About page is a place to tell the world about yourself. About page started by `AboutBlock`, then you can write something more about yourself. Of course, you want to show your archievements using [`Facts`](../content-blocks.mdx#facts) component. Could not miss your history of working [`Resume.Experience`](../content-blocks.mdx#resumeexprience), your education [`Resume.Education`](../content-blocks.mdx#resumeeducation)...
+About page is a place to tell the world about yourself. Of course, you want to show your achievements using [`Facts`](../content-blocks.mdx#facts) component. Could not miss your history of working [`Resume.Experience`](../content-blocks.mdx#resumeexperience), your education [`Resume.Education`](../content-blocks.mdx#resumeeducation)...
 
-About file is **`app\routes\__layout\about.tsx`**. It is safe for you to edit the lines between our markers.
+## Header block
+
+Language keys used for header block of about page are `about-me`, `self-introduction`, `about-description` which located at **`app\languages\aboutLangTable.ts`**. 
+
+<Tabs>
+<TabItem value="Usage">
+
+```tsx
+<HeaderBlock
+  title={t("about-me")}
+  subTitle={t("self-introduction")}
+  description={t("about-description")}
+/>
+```
+
+</TabItem>
+<TabItem value="Note">
+
+`about-description` accepts markdown text.
+
+</TabItem>
+<TabItem value="Screenshots">
+
+<div style={{textAlign: 'center'}}>
+
+![about header block](./img/about-headerblock.webp)
+
+</div>
+
+</TabItem>
+</Tabs>
+
+## Additional content blocks
+
+ About page is located at **`app\routes\__layout\about.tsx`**. It is safe for you to edit the lines between the markers. 
 
 <Tabs>
 <TabItem value="File">
@@ -42,6 +76,7 @@ About file is **`app\routes\__layout\about.tsx`**. It is safe for you to edit th
 Recommended content blocks for your about page
 
 - [Markdown](../content-blocks.mdx#markdown)
+- [Picture](../content-blocks.mdx#picture)
 - [Facts](../content-blocks.mdx#facts)
 - [Resume](../content-blocks.mdx#resume)
   + [Resume.Experience](../content-blocks.mdx#experience)
@@ -60,340 +95,68 @@ or you can use following blocks to enrich your about page
 <TabItem value="Examples">
 
 ```tsx
-<LinksGrid links={linksGrid} className="mb-10" />
-
-<LatestPortfolio
-  display={["title", "image", "description"]}
-  limit={2}
+<Picture
+  src="https://placeimg.com/192/192/people"
+  alignment="right"
+  rounded="xl"
+  oneThird
 />
 
-<LatestBlogPosts
-  display={["title", "image"]}
-  limit={2}
-  showAsColumn
+<Markdown
+  markdown={t("about-me...",[YOUR_NAME.text])}
 />
 
-<LatestContent.Note />
-<LatestContent.Announcement />
-<LatestContent.Update />
+<Facts
+  facts={factsInAbout}
+  langTable={factsLangTable}
+/>
 
-<Markdown.Wrapper>
-  <Component />
-</Markdown.Wrapper>
+<Resume.Experience
+  resume={experiences}
+  langTable={resumeLangTable}
+/>
 
-<TextHeader text={t("Curated links for your best")} />
-<LinksList links={linksList} className="my-10" />
+<Resume.Education
+  resume={education}
+  langTable={resumeLangTable}
+/>
+
+<Features.Simplicity
+  features={mySkills}
+  langTable={skillsLangTable}
+/>
+
+<Features.Art
+  features={mySkills}
+  langTable={skillsLangTable}
+/>
+
+<Features.Blocks
+  features={mySkills}
+  langTable={skillsLangTable}
+/>
+
+<Testimonials
+  testimonials={testimonials}
+  langTable={testimonialsLangTable}
+/>
 ```
 
 </TabItem>
 </Tabs>
 
-## 📝 Forewords block
+## Video tutorial
 
-All content should be composed using Markdown format. That's why we created a special file just for you to write for the homepage.
+```mdx-code-block
+import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 
-- Data file is `~/data/content/foreword.mdx`. Open this file and feel free to edit, write... anything you like.
-- To display this content, you would need to:
-  1. Import the files to `app\routes\__layout\index.tsx`. But don't worry, it is declared already.
-
-    ```ts
-    import Component from "~/data/content/foreword.mdx"
-    import Markdown from "~/components/Markdown"
-    ```
-
-  2. Paste this code to the your desired place in `app\routes\__layout\index.tsx`
-  
-    ```tsx
-    <Markdown.Wrapper>
-      <Component />
-    </Markdown.Wrapper>
-    ```
-
-## 🤔 Want homepage as bioLink?
-
-If you want you homepage as a bioLink, which display a list of links. You can use following sample:
-
-<Tabs>
-<TabItem value="Examples 1">
-
-```tsx
-<TextHeader text={t("Curated links for your best")} />
-<LinksList links={linksList} className="my-10" />
+<div className="video-container">
+  <LiteYouTubeEmbed
+    id="X8T4qx_VO50"
+    playlist={false}
+    title="Introduction about About page"
+    poster="hqdefault"
+    noCookie={true}
+  />
+</div>
 ```
-
-</TabItem>
-<TabItem value="Data">
-
-```ts
-export const linksList: LinkMeta[] = [
-  {
-    type: undefined,
-    title: "Upcoming events",
-    description: "Upcoming events",
-    slug: "/",
-    iconPicture: undefined
-  },
-  {
-    type: "zip",
-    title: "All chess matches with comments",
-    description: "Collected from 3 millions matches",
-    slug: "/",
-    iconPicture: undefined,
-    decoration: {
-      backgroundColor: ["blue", "red", "white"]
-    }
-  },
-  {
-    type: "xls",
-    title: "Dashboard for lazy man",
-    description: "Automate your daily tasks",
-    slug: "/",
-    iconPicture: undefined,
-    decoration: {
-      isBold: true,
-      isItalic: true
-    }
-  },
-  {
-    type: "youtube",
-    title: "My programming youtube channel",
-    slug: "/contact",
-    iconPicture: undefined,
-    decoration: {
-      isItalic: true
-    }
-  },
-  {
-    type: "cv",
-    title: "Curriculum vitae of Brian",
-    slug: "/files/mycv.pdf",
-    iconPicture: "/img/background/placeholder.svg",
-    decoration: {
-      isDownloadable: true
-    }
-  },
-]
-```
-
-</TabItem>
-<TabItem value="Type declaration">
-
-```ts
-/**
- * This is to build links list for homepage
- * to fullfill the features of biolink services
- */
-type LinkMeta = {
-  /**
-   * if you set a type for a link
-   * we will show an icon for the link (default icon)
-   * if you don't set imageUrl.
-   */
-  type?: LinkMetaType
-  title: string,
-  description?: string
-  slug: string,
-  iconPicture?: string,
-  decoration?: {
-    /**
-     * we will fill gradient the background
-     * 1st & 2nd is background gradient
-     * 3rd is text-color
-     */
-    backgroundColor?: [string, string, string]
-    isTextCenter?: boolean
-    isBold?: boolean
-    isItalic?: boolean
-    isDownloadable?: boolean
-  }
-}
-
-type LinkMetaType =
-  | "pdf"
-  | "doc"
-  | "link"
-  | "youtube"
-  | "ppt"
-  | "powerpoint"
-  | "excel"
-  | "xls"
-  | "word"
-  | "cv"
-  | "resume"
-  | "facebook"
-  | "linkedin"
-  | "tiktok"
-  | "instagram"
-  | "messenger"
-  | "hotline"
-  | "telephone"
-  | "phone"
-  | "shopping"
-  | "video"
-  | "laptop"
-  | "computer"
-  | "hardware"
-  | "zip"
-```
-
-</TabItem>
-</Tabs>
-
-Or you can combile `LinksGrid` and `LinksList`
-
-<Tabs>
-<TabItem value="Examples 1">
-
-```tsx
-<LinksGrid links={linksGrid} className="mb-10" />
-<TextHeader text={t("Curated links for your best")} />
-<LinksList links={linksList} className="my-10" />
-```
-
-</TabItem>
-<TabItem value="Data">
-
-```ts
-export const linksGrid: LinkMeta[] = [
-  {
-    title: "link1",
-    slug: "/about",
-    iconPicture: "/img/background/placeholder.svg",
-  },
-  {
-    title: "link2",
-    slug: "/terms-of-service",
-    iconPicture: "/img/background/placeholder.svg",
-  },
-  {
-    title: "link3",
-    slug: "https://twitter.com/",
-    iconPicture: "/img/background/placeholder.svg",
-    decoration: {
-      isBold: true,
-      isItalic: true
-    }
-  },
-  {
-    title: "link4",
-    slug: "/contact",
-    iconPicture: "/img/background/placeholder.svg",
-    decoration: {
-      isItalic: true
-    }
-  }
-]
-
-export const linksList: LinkMeta[] = [
-  {
-    type: undefined,
-    title: "Upcoming events",
-    description: "Upcoming events",
-    slug: "/",
-    iconPicture: undefined
-  },
-  {
-    type: "zip",
-    title: "All chess matches with comments",
-    description: "Collected from 3 millions matches",
-    slug: "/",
-    iconPicture: undefined,
-    decoration: {
-      backgroundColor: ["blue", "red", "white"]
-    }
-  },
-  {
-    type: "xls",
-    title: "Dashboard for lazy man",
-    description: "Automate your daily tasks",
-    slug: "/",
-    iconPicture: undefined,
-    decoration: {
-      isBold: true,
-      isItalic: true
-    }
-  },
-  {
-    type: "youtube",
-    title: "My programming youtube channel",
-    slug: "/contact",
-    iconPicture: undefined,
-    decoration: {
-      isItalic: true
-    }
-  },
-  {
-    type: "cv",
-    title: "Curriculum vitae of Brian",
-    slug: "/files/mycv.pdf",
-    iconPicture: "/img/background/placeholder.svg",
-    decoration: {
-      isDownloadable: true
-    }
-  },
-]
-```
-
-</TabItem>
-<TabItem value="Type declaration">
-
-```ts
-/**
- * This is to build links list for homepage
- * to fullfill the features of biolink services
- */
-type LinkMeta = {
-  /**
-   * if you set a type for a link
-   * we will show an icon for the link (default icon)
-   * if you don't set imageUrl.
-   */
-  type?: LinkMetaType
-  title: string,
-  description?: string
-  slug: string,
-  iconPicture?: string,
-  decoration?: {
-    /**
-     * we will fill gradient the background
-     * 1st & 2nd is background gradient
-     * 3rd is text-color
-     */
-    backgroundColor?: [string, string, string]
-    isTextCenter?: boolean
-    isBold?: boolean
-    isItalic?: boolean
-    isDownloadable?: boolean
-  }
-}
-
-type LinkMetaType =
-  | "pdf"
-  | "doc"
-  | "link"
-  | "youtube"
-  | "ppt"
-  | "powerpoint"
-  | "excel"
-  | "xls"
-  | "word"
-  | "cv"
-  | "resume"
-  | "facebook"
-  | "linkedin"
-  | "tiktok"
-  | "instagram"
-  | "messenger"
-  | "hotline"
-  | "telephone"
-  | "phone"
-  | "shopping"
-  | "video"
-  | "laptop"
-  | "computer"
-  | "hardware"
-  | "zip"
-```
-
-</TabItem>
-</Tabs>

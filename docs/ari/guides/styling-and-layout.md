@@ -6,11 +6,11 @@ sidebar_position: 40
 
 Ari is built to help you create powerful personal websites fast _(performance)_ and easy _(update and deploy)_ starting free _(thanks to free-tier of Cloudflare Pages)_.
 
-With initial version of Ari. You can design you portfolio article, blog post using [content blocks](./content-blocks). And can customize the color of Ari.
+With initial version of Ari, you can design your portfolio article, blog post using [content blocks](./content-blocks), and can customize the color of Ari.
 
 ## Content blocks
 
-Ari comes with a lot of [content blocks](./content-blocks.mdx) available for you to use.
+Ari comes with many [content blocks](./content-blocks.mdx) available for you to use.
 
 <details>
 
@@ -60,7 +60,7 @@ At line `70`, you can choose the color of your website from presets: yellow, yel
 const selectedColorsPreset = blue
 ```
 
-To make Ari simple, we just have a short set of colors as demonstrated below.
+To make Ari simple, we just have a short set of colors, as demonstrated below.
 
 ```ts
 const darkPurple = {
@@ -73,3 +73,18 @@ const darkPurple = {
 }
 ```
 
+## Video tutorial
+
+```mdx-code-block
+import LiteYouTubeEmbed from 'react-lite-youtube-embed';
+
+<div className="video-container">
+  <LiteYouTubeEmbed
+    id="X8T4qx_VO50"
+    playlist={false}
+    title="Styling"
+    poster="hqdefault"
+    noCookie={true}
+  />
+</div>
+```

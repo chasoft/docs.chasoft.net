@@ -4,32 +4,29 @@ import styles from './styles.module.css';
 
 const FeatureList = [
     {
-        title: 'Easy to Use',
-        Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+        title: 'Individuals',
+        Svg: require('@site/static/img/proud_coder.svg').default,
         description: (
             <>
-                Docusaurus was designed from the ground up to be easily installed and
-                used to get your website up and running quickly.
+                Build your edge skill to make your life easier. Do whatever you want.
             </>
         ),
     },
     {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Schools',
+    Svg: require('@site/static/img/back_to_school.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Supply your class with a new skill that could change his/her life afterward.
       </>
     ),
   },
     {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'Enterprises',
+    Svg: require('@site/static/img/interaction_design.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Invest in your employees with coding skills to speed up your business activities.
       </>
     ),
   },

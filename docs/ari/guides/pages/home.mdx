@@ -11,7 +11,7 @@ Your front page 🏡, the page that your visitors will see when they access your
 
 Of course, you can use any [content blocks](../content-blocks.mdx) but the `homepage` should be concise, tidy and providing overview information only. We have some recommended content blocks for your reference.
 
-Homepage file is **`app\routes\__layout\index.tsx`**. It is safe for you to edit the lines between our markers.
+Homepage file is **`app\routes\__layout\index.tsx`**. It is safe for you to edit the lines between the markers.
 
 <Tabs>
 <TabItem value="File">
@@ -85,7 +85,7 @@ Recommended content blocks for your homepage
 
 All content should be composed using Markdown format. That's why we created a special file just for you to write for the homepage.
 
-- Data file is `~/data/content/foreword.mdx`. Open this file and feel free to edit, write... anything you like.
+- Data file is `~/data/content/foreword.mdx`. Open this file, and please don't hesitate to edit, write... anything you like.
 - To display this content, you would need to:
   1. Import the files to `app\routes\__layout\index.tsx`. But don't worry, it is declared already.
 
@@ -104,7 +104,7 @@ All content should be composed using Markdown format. That's why we created a sp
 
 ## 🤔 Want homepage as bioLink?
 
-If you want you homepage as a bioLink, which display a list of links. You can use following sample:
+If you want your homepage as a bioLink, which display a list of links. You can use the following samples:
 
 <Tabs>
 <TabItem value="Examples 1">
@@ -232,7 +232,7 @@ type LinkMetaType =
 </TabItem>
 </Tabs>
 
-Or you can combile `LinksGrid` and `LinksList`
+Or you can combine `LinksGrid` and `LinksList`
 
 <Tabs>
 <TabItem value="Examples 2">
@@ -390,3 +390,27 @@ type LinkMetaType =
 
 </TabItem>
 </Tabs>
+
+Then, you would have a very **elegant** homepage as you wish.
+
+<div style={{textAlign: 'center'}}>
+
+![mobile home preview](./img/mobile-home-preview.webp)
+
+</div>
+
+## Video tutorial
+
+```mdx-code-block
+import LiteYouTubeEmbed from 'react-lite-youtube-embed';
+
+<div className="video-container">
+  <LiteYouTubeEmbed
+    id="X8T4qx_VO50"
+    playlist={false}
+    title="Introduction about Home page"
+    poster="hqdefault"
+    noCookie={true}
+  />
+</div>
+```

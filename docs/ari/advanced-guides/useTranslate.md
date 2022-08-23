@@ -43,9 +43,9 @@ That means if you
 t("english")
 ```
 
-More advanced usage is when you want to put one or more values to placeholders in the translation... This would help to seperated the translation with values.
+More advanced usage is when you want to put one or more values to placeholders in the translation... This would help to separated the translation with values.
 
-For example, you have following sanple language table:
+For example, you have a sample language table:
 
 ```ts
 const sampleLangTable: LangTable = {
@@ -68,7 +68,7 @@ t("our-life-time-pricing-is-dollar", ["199"])
 //if current language is vi: `Gói trọn đời là 199 đô la.`
 ```
 
-please note that you can have multi-placeholders and multi values to fill in. But they will fill in by its order.
+It is worth mentioning that you can have multi-placeholders and multi values to fill in. But they will fill in by its order.
 
 ```ts
 t("Hello %s, how are you %s?", ["Brian", "yesterday"])

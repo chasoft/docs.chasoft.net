@@ -61,7 +61,7 @@ const config = {
         title: 'Chasoft Labs',
         logo: {
           alt: 'Chasoft Labs Documentation ',
-          src: 'img/logo.svg',
+          src: 'img/logo.png',
         },
         items: [
           {

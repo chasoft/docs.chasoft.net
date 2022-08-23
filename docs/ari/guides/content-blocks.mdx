@@ -4,10 +4,11 @@ sidebar_position: 70
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrowserWindow from '@site/src/components/BrowserWindow';
 
 # Content blocks
 
-Ari comes with a lot of content blocks (or designed blocks) which helps you to present your data/information in pages, blog post or any places you want to.
+Ari comes with many content blocks *(or designed blocks)* which helps you to present your data/information in pages, blog post or any places you want to.
 
 ## Alert
 
@@ -47,7 +48,11 @@ import Alert from "~/components/Alert"
 </TabItem>
 <TabItem value="Screenshots">
 
-screenshots....
+<div style={{textAlign: 'center'}}>
+
+![Alert component](./img/alert-demo.webp)
+
+</div>
 
 </TabItem>
 </Tabs>
@@ -84,7 +89,11 @@ Amet dolore cillum dolore officia sit eiusmod aliqua Lorem sit excepteur ullamco
 </TabItem>
 <TabItem value="Screenshots">
 
-screenshots....
+<div style={{textAlign: 'center'}}>
+
+![Align component](./img/align-demo.webp)
+
+</div>
 
 </TabItem>
 </Tabs>
@@ -132,7 +141,7 @@ import Facts from "~/components/Facts"
 <TabItem value="Data">
 
 ```ts
-const factsInAbout: FactsGroup = {
+export const factsInAbout: FactsGroup = {
   title: "fact-in-about",
   description: "fact-in-about-description",
   facts: [
@@ -163,17 +172,24 @@ const factsInAbout: FactsGroup = {
 </TabItem>
 <TabItem value="Note">
 
-if you don't need translation, just set `langTable` an `empty object`
+If you don't use translation, just remove `langTable` property.
 
-```ts
-// empty object
-const factsLangTable = {}
+```tsx
+<Facts
+  // highlight-next-line
+  facts={factsInAbout}  //just remove this line
+  langTable={factsLangTable}
+/>
 ```
 
 </TabItem>
 <TabItem value="Screenshots">
 
-screenshots....
+<div style={{textAlign: 'center'}}>
+
+![Facts component](./img/facts-demo.webp)
+
+</div>
 
 </TabItem>
 </Tabs>
@@ -250,17 +266,26 @@ export const faqsServices: FAQs[] = [
 </TabItem>
 <TabItem value="Note">
 
-if you don't need translation, just set `langTable` an `empty object`
+If you don't use translation, just remove `langTable` property and add `standalone` property.
 
-```ts
-// empty object
-const factsLangTable = {}
+```tsx
+<FaqsBlock
+  // highlight-next-line
+  langTable={faqsServicesLangTable}  //just remove this line
+  faqs={faqsServices}
+  // highlight-next-line
+  standalone  //add this line
+/>
 ```
 
 </TabItem>
 <TabItem value="Screenshots">
 
-screenshots....
+<div style={{textAlign: 'center'}}>
+
+![Faqs component](./img/faqs-demo.webp)
+
+</div>
 
 </TabItem>
 </Tabs>
@@ -337,7 +362,11 @@ notes...
 </TabItem>
 <TabItem value="Screenshots">
 
-screenshots....
+<div style={{textAlign: 'center'}}>
+
+![Features Simplicity component](./img/features-simplicity.webp)
+
+</div>
 
 </TabItem>
 </Tabs>
@@ -412,7 +441,11 @@ notes...
 </TabItem>
 <TabItem value="Screenshots">
 
-screenshots....
+<div style={{textAlign: 'center'}}>
+
+![Features Blocks component](./img/features-block.webp)
+
+</div>
 
 </TabItem>
 </Tabs>
@@ -424,7 +457,7 @@ screenshots....
 <summary>Type declaration</summary>
 
 ```ts
-type Props = {
+type FeaturesPictureProps = {
   features: TFeatures
   langTable: LangTable
   /**
@@ -491,7 +524,11 @@ notes...
 </TabItem>
 <TabItem value="Screenshots">
 
-screenshots....
+<div style={{textAlign: 'center'}}>
+
+![Features Pictures component](./img/features-picture.webp)
+
+</div>
 
 </TabItem>
 </Tabs>
@@ -570,7 +607,11 @@ notes...
 </TabItem>
 <TabItem value="Screenshots">
 
-screenshots....
+<div style={{textAlign: 'center'}}>
+
+![Features Art component](./img/features-art.webp)
+
+</div>
 
 </TabItem>
 </Tabs>
@@ -610,10 +651,18 @@ import Highlight from "~/components/Highlight"
 </Highlight>
 ```
 
+```tsx
+Sed ut perspiciatis <Highlight>3rd article</Highlight> unde omnis iste natus error sit voluptatem <Highlight color="blue" text="white">doloremque</Highlight> doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo <Highlight color="yellow" text="black">explicabo</Highlight> veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+```
+
 </TabItem>
 <TabItem value="Screenshots">
 
-screenshots....
+<div style={{textAlign: 'center'}}>
+
+![highlight component](./img/highlight.webp)
+
+</div>
 
 </TabItem>
 </Tabs>
@@ -629,6 +678,7 @@ Display a image based on screen size. `mobile` for screen size `>= 640px`. `desk
 ```ts
 type ImageProps = JSX.IntrinsicElements["img"] & {
   srcList: ImgSrcSet,
+  rounded?: "sm" | "md" | "lg" | "xl" | "2xl"
   wfull?: boolean,
   hfull?: boolean
 }
@@ -659,7 +709,7 @@ import Image from "~/components/Image"
 <TabItem value="Data">
 
 ```ts
-const image = {
+export const image = {
   mobile: "/img/background/image1.jpg",
   desktop: "/img/background/image2.jpg",
   description: "image 1"
@@ -672,11 +722,6 @@ const image = {
 This component is flexible for it is extended from `img` tag and it can receive `styles` properties
 
 </TabItem>
-<TabItem value="Screenshots">
-
-screenshots....
-
-</TabItem>
 </Tabs>
 
 ## LatestBlogPosts
@@ -686,7 +731,7 @@ screenshots....
 <summary>Type declaration</summary>
 
 ```ts
-type Props = {
+type LatestBlogPostsProps = {
   showTitle?: boolean
   display?: Display
   /**
@@ -705,24 +750,21 @@ type Props = {
 ```tsx
 import LatestBlogPosts from "~/components/LatestBlogPosts"
 
+<LatestBlogPosts
+  display={["image", "description"]}
+  limit={2}
+  showAsColumn
+/>
 ```
-
-</TabItem>
-<TabItem value="Data">
-
-```ts
-
-```
-
-</TabItem>
-<TabItem value="Note">
-
-notes...
 
 </TabItem>
 <TabItem value="Screenshots">
 
-screenshots....
+<div style={{textAlign: 'center'}}>
+
+![latest blog post component](./img/latest-blog-post.webp)
+
+</div>
 
 </TabItem>
 </Tabs>
@@ -768,10 +810,24 @@ import LatestContent from "~/components/LatestContent"
 <LatestContent.UpdateLink />
 ```
 
+```tsx
+View latest announcement <LatestContent.AnnouncementLink /> for details.
+```
+
 </TabItem>
 <TabItem value="Screenshots">
 
-screenshots....
+<div style={{textAlign: 'center'}}>
+
+![latest link component](./img/latest-contents-link.webp)
+
+</div>
+
+<div style={{textAlign: 'center'}}>
+
+![latest content component](./img/latest-contents.webp)
+
+</div>
 
 </TabItem>
 </Tabs>
@@ -783,7 +839,7 @@ screenshots....
 <summary>Type declaration</summary>
 
 ```ts
-type Props = {
+type LatestPortfolioProps = {
   showTitle?: boolean
   display?: Display
   limit?: number
@@ -799,7 +855,7 @@ type Props = {
 import LatestPortfolio from "~/components/LatestPortfolio"
 
 <LatestPortfolio
-  display={["title", "image", "description"]}
+  display={["image", "description"]}
   limit={2}
 />
 ```
@@ -807,20 +863,28 @@ import LatestPortfolio from "~/components/LatestPortfolio"
 </TabItem>
 <TabItem value="Screenshots">
 
-screenshots....
+<div style={{textAlign: 'center'}}>
+
+![latest portfolio component](./img/latest-portfolio.webp)
+
+</div>
 
 </TabItem>
 </Tabs>
 
 ## Link
 
+If you want a `link`, let you use Link component. Or if the target is `internal links`, you must use this component, or multi-language feature not working.
+
 <details>
 
 <summary>Type declaration</summary>
 
 ```ts
-type Props = {
-  ....
+type LinkProps = {
+  to: string
+  className?: string
+  children: string
 }
 ```
 
@@ -832,17 +896,8 @@ type Props = {
 ```tsx
 import Link from "~/components/Link"
 
+<Link to="/blog">Blog</Link>
 ```
-
-</TabItem>
-<TabItem value="Note">
-
-notes...
-
-</TabItem>
-<TabItem value="Screenshots">
-
-screenshots....
 
 </TabItem>
 </Tabs>
@@ -854,7 +909,7 @@ screenshots....
 <summary>Type declaration</summary>
 
 ```ts
-type Props = {
+type LinksGridProps = {
   links: LinkMeta[]
   className?: string
 }
@@ -900,33 +955,26 @@ imort LinksGrid from "~/components/LinksGrid"
 <TabItem value="Data">
 
 ```ts
-const linksGrid: LinkMeta[] = [
+export const linksGrid: LinkMeta[] = [
   {
     title: "link1",
     slug: "/about",
-    iconPicture: "/img/background/placeholder.svg",
+    iconPicture: "/img/background/placeholder.svg"
   },
   {
     title: "link2",
     slug: "/terms-of-service",
-    iconPicture: "/img/background/placeholder.svg",
+    iconPicture: "/img/background/placeholder.svg"
   },
   {
     title: "link3",
     slug: "https://twitter.com/",
-    iconPicture: "/img/background/placeholder.svg",
-    decoration: {
-      isBold: true,
-      isItalic: true
-    }
+    iconPicture: "/img/background/placeholder.svg"
   },
   {
     title: "link4",
     slug: "/contact",
     iconPicture: "/img/background/placeholder.svg",
-    decoration: {
-      isItalic: true
-    }
   }
 ]
 ```
@@ -939,7 +987,11 @@ notes...
 </TabItem>
 <TabItem value="Screenshots">
 
-screenshots....
+<div style={{textAlign: 'center'}}>
+
+![links grid component](./img/links-grid.webp)
+
+</div>
 
 </TabItem>
 </Tabs>
@@ -951,9 +1003,34 @@ screenshots....
 <summary>Type declaration</summary>
 
 ```ts
-type Props = {
+type LinksListProps = {
   links: LinkMeta[]
   className?: string
+}
+
+type LinkMeta = {
+  /**
+   * if you set a type for a link
+   * we will show an icon for the link (default icon)
+   * if you don't set imageUrl.
+   */
+  type?: LinkMetaType
+  title: string,
+  description?: string
+  slug: string,
+  iconPicture?: string,
+  decoration?: {
+    /**
+     * we will fill gradient the background
+     * 1st & 2nd is background gradient
+     * 3rd is text-color
+     */
+    backgroundColor?: [string, string, string]
+    isTextCenter?: boolean
+    isBold?: boolean
+    isItalic?: boolean
+    isDownloadable?: boolean
+  }
 }
 ```
 
@@ -972,7 +1049,7 @@ import LinksList from "~/components/LinksList"
 <TabItem value="Data">
 
 ```ts
-const linksList: LinkMeta[] = [
+export const linksList: LinkMeta[] = [
   {
     type: undefined,
     title: "Upcoming events",
@@ -1030,12 +1107,18 @@ notes...
 </TabItem>
 <TabItem value="Screenshots">
 
-screenshots....
+<div style={{textAlign: 'center'}}>
+
+![Links list component](./img/links-list.webp)
+
+</div>
 
 </TabItem>
 </Tabs>
 
 ## Map
+
+Map component allows you to show a map and you can also add many custom marker. When hovering over a marker, it information would be display on the top right of the map.
 
 <details>
 
@@ -1095,7 +1178,7 @@ import Map from "~/components/Map"
 <TabItem value="Data">
 
 ```ts
-const myMarkers: TMarker[] = [
+export const myMarkers: TMarker[] = [
     {
       anchor: [10.8119658,106.7759439],
       slug: "/blog/labore-nisi-cillum-voluptate-consequat-reprehenderit-laborum-deserunt-exercitation",
@@ -1128,10 +1211,39 @@ Do not set more than 1 markers with `isDefault={true}` or their content would be
 
 You can use Google Map and, select a location on the map and you will have the anchor
 
+<BrowserWindow
+  url={
+    <span>
+      .../Clarke+Quay/@
+      <span style={{ fontWeight: "bold", color: "red" }}>1.29105,103.8439817</span>
+      ,
+      <span style={{ fontWeight: "bold", color: "blue" }}>17</span>
+      z/data=!3m1!5s0x31...
+    </span>
+  }
+>
+
+<div style={{textAlign: 'center'}}>
+
+![How to get map location component](./img/how-to-get-map-location.webp)
+
+</div>
+
+</BrowserWindow>
+
+```
+  anchor = [1.29105, 103.8439817]
+  zoom = 17
+```
+
 </TabItem>
 <TabItem value="Screenshots">
 
-screenshots....
+<div style={{textAlign: 'center'}}>
+
+![Map component](./img/map.webp)
+
+</div>
 
 </TabItem>
 </Tabs>
@@ -1192,10 +1304,7 @@ In most cases, you don't need to use any properties except `markdown`
 <Mardown markdown="...." />
 ```
 
-</TabItem>
-<TabItem value="Screenshots">
-
-screenshots....
+Markdown syntaxes are simple, check this guide for examples: [Markdown](./markdown)
 
 </TabItem>
 </Tabs>
@@ -1214,6 +1323,12 @@ type PictureProps = {
   alt?: string
   src: string
   alignment?: "left" | "right" | "expanded"
+  rounded?: "sm" | "md" | "lg" | "xl" | "2xl"
+  /**
+   * By the default, when alignment is left or right, the width would be 1/2
+   * Some cases, you want it to be smaller, which is 1/3
+   */
+  oneThird?: boolean
 }
 ```
 
@@ -1240,11 +1355,6 @@ import Picture from "~/components/Picture"
 `Picture` display 1 single image.
 
 `Image` display 1 single image based on the screen size. You can review its [description](#image) for more information.
-
-</TabItem>
-<TabItem value="Screenshots">
-
-screenshots....
 
 </TabItem>
 </Tabs>
@@ -1316,7 +1426,7 @@ import PricingTable from "~/components/PricingTable"
 <TabItem value="Data">
 
 ```ts
-const pricingList: PricingData = {
+export const pricingList: PricingData = {
   title: "pricingList.title",
   description: "pricingList.description",
   defaultPriceType: "monthly",
@@ -1405,7 +1515,11 @@ notes...
 </TabItem>
 <TabItem value="Screenshots">
 
-screenshots....
+<div style={{textAlign: 'center'}}>
+
+![pricing table list component](./img/pricing-list.webp)
+
+</div>
 
 </TabItem>
 </Tabs>
@@ -1438,7 +1552,7 @@ import PricingTable from "~/components/PricingTable"
 <TabItem value="Data">
 
 ```ts
-const pricing2Column: PricingData = {
+export const pricing2Column: PricingData = {
   title: "pricing2Column.title",
   description: "pricing2Column.description",
   defaultPriceType: "yearly",
@@ -1505,7 +1619,11 @@ notes...
 </TabItem>
 <TabItem value="Screenshots">
 
-screenshots....
+<div style={{textAlign: 'center'}}>
+
+![pricing table 2cols component](./img/pricing-2cols.webp)
+
+</div>
 
 </TabItem>
 </Tabs>
@@ -1538,7 +1656,7 @@ import PricingTable from "~/components/PricingTable"
 <TabItem value="Data">
 
 ```ts
-const pricing3Column: PricingData = {
+export const pricing3Column: PricingData = {
   title: "pricing3Column.title",
   description: "pricing3Column.description",
   defaultPriceType: "monthly",
@@ -1612,7 +1730,11 @@ notes...
 </TabItem>
 <TabItem value="Screenshots">
 
-screenshots....
+<div style={{textAlign: 'center'}}>
+
+![pricing table 3cols component](./img/pricing-3cols.webp)
+
+</div>
 
 </TabItem>
 </Tabs>
@@ -1626,13 +1748,14 @@ screenshots....
 <summary>Type declaration</summary>
 
 ```ts
-type Props = {
+type ResumeExperienceProps = {
   resume: ResumeExperience
   langTable: LangTable
 }
 
-export type ResumeExperience = {
+type ResumeExperience = {
   title: string
+  description?: string
   items: {
     logoUrl: string
     jobTitle: string
@@ -1673,7 +1796,7 @@ import Resume from "~/components/Resume"
 <TabItem value="Data">
 
 ```ts
-const experiences: ResumeExperience = {
+export const experiences: ResumeExperience = {
   title: "experience",
   items: [
     {
@@ -1718,7 +1841,11 @@ notes...
 </TabItem>
 <TabItem value="Screenshots">
 
-screenshots....
+<div style={{textAlign: 'center'}}>
+
+![resume experience component](./img/resume-experience.webp)
+
+</div>
 
 </TabItem>
 </Tabs>
@@ -1730,13 +1857,14 @@ screenshots....
 <summary>Type declaration</summary>
 
 ```ts
-type Props = {
+type ResumeEducationProps = {
   resume: ResumeEducation
   langTable: LangTable
 }
 
 type ResumeEducation = {
   title: string
+  description?: string
   items: {
     logoUrl: string
     major: string
@@ -1766,7 +1894,7 @@ import Resume from "~/components/Resume"
 <TabItem value="Data">
 
 ```ts
-const education: ResumeEducation = {
+export const education: ResumeEducation = {
   title: "education",
   items: [
     {
@@ -1797,7 +1925,11 @@ notes...
 </TabItem>
 <TabItem value="Screenshots">
 
-screenshots....
+<div style={{textAlign: 'center'}}>
+
+![resume education component](./img/resume-education.webp)
+
+</div>
 
 </TabItem>
 </Tabs>
@@ -1809,7 +1941,7 @@ screenshots....
 <summary>Type declaration</summary>
 
 ```ts
-type Props = {
+type SliderProps = {
   images: ImgSrcSet[]
   autoPlay?: boolean
   showThumbs?: boolean
@@ -1841,7 +1973,7 @@ import Slider from "~/components/Slider"
 <TabItem value="Data">
 
 ```ts
-const mySlides = [
+export const mySlides = [
   {
     mobile: "/img/background/placeholder.svg",
     description: "image 1"
@@ -1864,12 +1996,21 @@ const mySlides = [
 </TabItem>
 <TabItem value="Note">
 
-notes...
+Slider could be full width or you can align it to the `left` or `right`.
 
-</TabItem>
-<TabItem value="Screenshots">
+```tsx
+<Slider
+  alignment="right"
+  images={mySlides}
+/>
+```
 
-screenshots....
+```tsx
+<Slider
+  alignment="left"
+  images={mySlides}
+/>
+```
 
 </TabItem>
 </Tabs>
@@ -1882,7 +2023,7 @@ screenshots....
 <summary>Type declaration</summary>
 
 ```ts
-type Props = {
+type TestimonialsProps = {
   testimonials: TestimonialsGroup,
   langTable: LangTable
 }
@@ -1919,10 +2060,10 @@ import Testimonials from "~/components/Testimonials"
 <TabItem value="Data">
 
 ```ts
-const testimonials: TestimonialsGroup =
+export const testimonials: TestimonialsGroup =
 {
-  title: "testimonial",
-  description: "feedbacks **for my** clients",
+  title: "testimonials",
+  description: "Commodo excepteur **exercitation** eiusmod in eiusmod ea in consequat non. Adipisicing ex cupidatat commodo fugiat do ea veniam ullamco qui aliquip officia mollit ipsum elit.",
   testimonials: [
     {
       name: "Client1",
@@ -1966,7 +2107,11 @@ notes...
 </TabItem>
 <TabItem value="Screenshots">
 
-screenshots....
+<div style={{textAlign: 'center'}}>
+
+![testimonials component](./img/testimonials.webp)
+
+</div>
 
 </TabItem>
 </Tabs>
@@ -1978,7 +2123,7 @@ screenshots....
 <summary>Type declaration</summary>
 
 ```ts
-type Props = {
+type TranslateProps = {
   lang: Language
   children: React.ReactNode
 }
@@ -2025,12 +2170,14 @@ export const CURRENCY: Record<Language, string> = {
 
 ### Video.Youtube
 
+Embed youtube video.
+
 <details>
 
 <summary>Type declaration</summary>
 
 ```ts
-type Props = {
+type VideoYoutubeProps = {
   /**
    * `id` of the video or playlist
    * eg: https://www.youtube.com/watch?v=8kV8KVWZYaw&list=PLCzpHpwST0xx8IxDzF82Va_rhIEcpbgW5
@@ -2074,7 +2221,53 @@ notes...
 </TabItem>
 <TabItem value="Screenshots">
 
-screenshots....
+<div style={{textAlign: 'center'}}>
+
+![youtube component](./img/features-art.webp)
+
+</div>
+
+</TabItem>
+</Tabs>
+
+### Video.Local
+
+Play your local video files.
+
+<details>
+
+<summary>Type declaration</summary>
+
+```ts
+type VideoLocalProps = {
+	src: string
+	autoPlay?: boolean
+	loop?: boolean
+	muted?: boolean
+	aspectRatio?: string
+	className?: string
+}
+```
+
+</details>
+
+<Tabs>
+<TabItem value="Usage">
+
+```tsx
+import Video from "~/components/Video"
+
+<Video.Local
+  src="video.mp4"
+  autoPlay
+  loop
+/>
+```
+
+</TabItem>
+<TabItem value="Note">
+
+The default aspect-ratio is `16 / 9`.
 
 </TabItem>
 </Tabs>

@@ -1,8 +1,8 @@
 ---
-sidebar_position: 31
+sidebar_position: 40
 ---
 
-# FAQs
+# Frequently Asked Questions
 
 Frequently asked questions about Chasoft Labs and its products/services.
 
