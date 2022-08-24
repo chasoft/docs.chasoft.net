@@ -12,11 +12,13 @@ sidebar_position: 1
 
 ⚡️ Ari will help you ship a **lightning fast website** that you will be confident.
 
-💸 Building maintainable website is hard and expensive. Instead, **focus on your content** and just write Markdown files.
+💯 **Advanced searching** feature helps your visitor searching, filtering the easy way any data by any keywords. Besides, **“what's new”** information central helps you to navigate and be able to share any pages.
 
-💥 Ready for more? Use **advanced features** like i18n, **“what's new”** information central.
+💸 Building a maintainable website is hard and expensive. Instead, **focus on your content** and just write Markdown files.
 
-🧐 Ari is a **Server-side Rendering** website. It builds a **multi-pages application** with fast client-side navigation, leveraging the full power of **React** to make your site interactive. It provides out-of-the-box **blogging features** but can be used to create **your valuable personal website site** *(or it could be a bioLink, personal sharing platform, blogger, showcase, etc which all power your private interests or business needs)*.
+💥 Ready for more? Use **advanced features** like i18n.
+
+🧐 Ari is a **Server-side Rendering** website. It builds a **multi-pages application** with fast client-side navigation, leveraging the full power of **React** to make your site interactive *(has ability to **share any corner** of your personal website)*. It provides out-of-the-box **blogging features** but can be used to create **your valuable personal website site** *(or it could be a bioLink, personal sharing platform, blogger, showcase, etc. Which all powered your private interests or business needs)*. 
 
 ## Ari: Powerful Serverless Personal Website
 
