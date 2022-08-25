@@ -80,7 +80,7 @@ import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 
 <div className="video-container">
   <LiteYouTubeEmbed
-    id="X8T4qx_VO50"
+    id="YEFoHFK5ydU"
     playlist={false}
     title="Styling"
     poster="hqdefault"

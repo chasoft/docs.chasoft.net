@@ -18,7 +18,9 @@ sidebar_position: 1
 
 💥 Ready for more? Use **advanced features** like i18n.
 
-🧐 Ari is a **Server-side Rendering** website. It builds a **multi-pages application** with fast client-side navigation, leveraging the full power of **React** to make your site interactive *(has ability to **share any corner** of your personal website)*. It provides out-of-the-box **blogging features** but can be used to create **your valuable personal website site** *(or it could be a bioLink, personal sharing platform, blogger, showcase, etc. Which all powered your private interests or business needs)*. 
+🧐 Ari is a **Server-side Rendering** website. It builds a **multi-pages application** with fast client-side navigation, leveraging the full power of **React** to make your site interactive *(has ability to **share any corner** of your personal website)*. It provides out-of-the-box **blogging features** but can be used to create **your valuable personal website site** *(or it could be a bioLink, personal sharing platform, blogger, showcase, etc. Which all powered your private interests or business needs)*.
+
+🤑 Deploy to Cloudflare Pages for **free** - no monthly fee, no annual fee.
 
 ## Ari: Powerful Serverless Personal Website
 
@@ -29,7 +31,7 @@ import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 
 <div className="video-container">
   <LiteYouTubeEmbed
-    id="X8T4qx_VO50"
+    id="YEFoHFK5ydU"
     playlist={false}
     title="Ari: Powerful Personal Website Made Easy"
     poster="hqdefault"

@@ -134,7 +134,7 @@ Publish `ari` to **private** repository, not public repository. For ari is not o
 
 <div className="video-container">
   <LiteYouTubeEmbed
-    id="X8T4qx_VO50"
+    id="YEFoHFK5ydU"
     playlist={false}
     title="Setup local development environment with Visual Studio Code"
     poster="hqdefault"
@@ -146,7 +146,7 @@ Publish `ari` to **private** repository, not public repository. For ari is not o
 
 <div className="video-container">
   <LiteYouTubeEmbed
-    id="X8T4qx_VO50"
+    id="YEFoHFK5ydU"
     playlist={false}
     title="Setup local development environment with Visual Studio Code"
     poster="hqdefault"
