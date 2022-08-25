@@ -19,6 +19,7 @@ They are [home](./home.mdx), [about](./about.mdx), [services](./services.mdx). Y
 
 They are, such as Terms of Service, Disclaimer page. You create the file by yourself.
 
+**Adding custom pages to your website and have some configuration**
 ```mdx-code-block
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 
@@ -33,3 +34,8 @@ import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 </div>
 ```
 
+.
+
+:::info
+Don't forget to read [files structure](../../advanced-guides/files-structure.mdx) to build your awareness about the structure of Ari.
+:::

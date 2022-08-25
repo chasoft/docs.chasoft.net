@@ -12,4 +12,6 @@ For the very first time, it looks too much information to fill-in, but trust me.
 
 > **“All things are difficult before they are easy”** – *Thomas Fuller*
 
+:::note
+Don't forget to read [files structure](../advanced-guides/files-structure.mdx) to build your awareness about the structure of Ari.
 :::

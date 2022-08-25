@@ -86,6 +86,10 @@ To stop the local server, (make sure the terminal is active) press `Ctrl + C`
 
   Let you run `npm run dev` to start the local server to preview your website. When you save any changes, local server will automatically be updated accordingly.
 
+  :::info
+  Don't forget to read [files structure](../advanced-guides/files-structure.mdx) to build your awareness about the structure of Ari.
+  :::
+
 7. **Deploy your website to Cloudflare Pages**
 
   **Git setup**
