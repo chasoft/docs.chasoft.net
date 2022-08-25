@@ -88,8 +88,46 @@ To stop the local server, (make sure the terminal is active) press `Ctrl + C`
 
 7. **Deploy your website to Cloudflare Pages**
 
-  Up your website to GitHub, connect GitHub to Cloudflare Pages. That's all.
+  **Git setup**
 
+  - Open Visual Studio Code
+  - Open Ari folder (File -> Open Folder...)
+  - Go to Source Control page (Ctrl+Shift+X)
+  - Click Install Git button
+
+  **Declare GitHub account**
+
+  - Open goto Terminal window of Visual Studio Code, run following command
+
+    ```
+    git config --global user.email "demo1@chasoft.net"
+    git config --global user.name "Brian"
+    ```
+
+    `user.email` is email which you registered GitHub account
+    `user.name` is your name or whatever name you want.
+
+    **Deploy to GitHub repository**
+
+    After installing **git**, let you restart your Visual Studio Code.
+
+    - Go to Source Control Page (Ctrl+Shift+X)
+    - Click a new button called "Publish to GitHub repository"
+    - A dropdown menu will be showed, and let you enter your repository name and remember to choose **private repository** *(do not choose **public repository**)*
+
+    If any dialog showe to ask you to login to GitHub, just do it. Let you choose `Browser` open.
+
+:::warning
+Publish `ari` to **private** repository, not public repository. For ari is not open-source application.
+:::
+
+  **Deploy to Cloudflare pages**
+
+  - Sign in to Cloudflare
+  - Go to Pages, connect to git => github
+  - Create a project => choose your repository
+  - Choose **Remix** as your framework
+  
   That's it. Enjoy your website! Promote our website through any channels you have available!
 
 ## Local with Visual Studio Code
