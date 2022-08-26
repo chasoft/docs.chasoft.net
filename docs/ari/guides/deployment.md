@@ -2,34 +2,66 @@
 sidebar_position: 50
 ---
 
-# Deployment to Cloudflare Pages
+# Deployment
 
 ![ari 1.x deployment model](./img/ari-1.x-deployment-model.webp)
 
-Ari 1.x only support to deploy to Cloudflare Pages. The deployment process is very great simple and easy as described below.
-
-1. You have your own local development environment, modify Ari as you wish. Tested locally.
-
-2. Create a GitHub repository _**(private repository)**_ and push Ari to your GitHub repository.
-
-3. Connect your GitHub account to Cloudflare Pages.
-
-And everything would be executed automatically. Every time you update your GitHub, your Ari would be deployed to Cloudflare Pages automatically.
+Deploy a serverless to Cloudflare Pages can not be easier. First you need to create a [private](../getting-started/faqs.md) GitHub repository and publish your Ari there. The next step is to go to Cloudflare Pages and publish your website with just a few clicks.
 
 :::info
-
-**Ari** could be ported to run on any serverless platform _(thanks to [Remix Web Framework](https://remix.run/))_ such as:
-
-* AWS
-* Cloudflare worker
-* FlyIo
-* Netlify
-* Vercel
-* Any Express server
-
-but for the very first version of **Ari** _(1.x)_, we only support to deploy to **`Cloudflare Pages`**. The reason is that **Ari** (1.x) focus on `standalone spirit` and `effordable spirit`. You would have a powerful Serverless Personal Website for `FREE` when deploy to `Cloudflare Pages`
-
+To check whether you declare email *(which is used to register GitHub)* with Git or not, try following command:
+```
+git config --global user.email
+```
+If it returns your email address, then everything should be fine to continue.
 :::
+
+Assumes that you have had your local development environment already. Follows the instructions below to get started:
+
+## Publish Ari to GitHub repository
+
+The most easiest way to publish is through Visual Studio Code.
+
+- Open Visual Studio Code
+- Open Ari folder *(File -> Open Folder...)*
+- Go to Source Control page *(or press Ctrl+Shift+X)*
+- Click **`Publish to GitHub`** button
+
+<details>
+<summary>Screenshots</summary>
+
+<div style={{textAlign: 'center'}}>
+
+![Publish to GitHub](./img/publish-ari-to-git-hub-the-first-time.webp)
+
+![Publish to GitHub Successfully](./img/publish-ari-to-git-hub-the-first-time-successful.webp)
+
+</div>
+
+:::warning
+You must publish your Ari to **`GitHub private repository`**.
+:::
+
+</details>
+
+## Deploy to Cloudflare pages
+
+- Sign in to Cloudflare
+- Go to Pages > Create a project > Connect to Git
+- You would need to follow some steps to Authorize Cloudflare to access your GitHub account
+- Select a repository *(your newly created repository)* > Click **"Begin setup"** button
+- Set up builds and deployments: choose `Remix` as your `Framework preset` > Click `Save and Deploy` button
+
+  <details>
+  <summary>Screenshots</summary>
+  <div style={{textAlign: 'center'}}>
+
+  ![Deploy to Cloudflare Pages](./img/deploy-to-cloudflare.webp)
+
+  </div>
+  </details>
+
+One minute later ⚡ you have a website deployed globally at the address `https://{yourname}.pages.dev`, if you own a domain, add it later in minutes. 🎉 Enjoy your website! Promote our website through any channels you have available!
 
 ## Video tutorial
 
@@ -40,7 +72,7 @@ import LiteYouTubeEmbed from 'react-lite-youtube-embed';
   <LiteYouTubeEmbed
     id="YEFoHFK5ydU"
     playlist={false}
-    title="Deploy Ari to Cloudflare Pages"
+    title="Publish Ari to GitHub and Deploy to Cloudflare Pages"
     poster="hqdefault"
     noCookie={true}
   />

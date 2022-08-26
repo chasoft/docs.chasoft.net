@@ -6,154 +6,75 @@ import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 
 # Installation
 
-To use Ari, you must have a local development environment: `local` or `cloud`. Currently, I have both. `1` local for daily activities *(in my desktop computer)* and `1` in the cloud for ad-hoc updates or when I'm away from my computer *(borrow any computer, access a website, login and there you go... no setup)*.
+Ari is a full-featured & completed `serverless application`. To deploy your application to the cloud, there is no need to do anything. Connect your GitHub repository where you store your Ari to Cloudflare and next next next,... and you have your website deployed globally at the address `https://{yourname}.pages.dev`, if you own a domain, add it later in minutes.
 
-Anyway, at the very first time, let you just focus on the local environment with Visual Studio Code only. When you get used to Ari and Ari becomes your online platform, then setting up Cloud environment just takes 5-10 minutes.
+What you are dealing with Ari is `local development environment`. You need to set up a local development environment to development, preview your Ari *(your website)* locally. When it is ready to be public, you push it to your GitHub repository and do the [deployment process](../guides/deployment.md).
 
-## Preparations
+## Install softwares {#install-softwares}
 
-1. **Create all essential accounts**
+1. **Visual Studio Code** (VS Code) - a code editor redefined and optimized for building and debugging modern web and cloud applications
 
-    - [GitHub](https://github.com/signup): to store your data
-    - [Cloudflare](https://dash.cloudflare.com/sign-up): to host your website for free
-    - [Mailjet](https://app.mailjet.com/signup?lang=en_US): to let your contact page working
+    Go to https://code.visualstudio.com/, download and install.
 
-2. **Set up your local development environment with Visual Studio Code**
+2. **NodeJs** - is a JavaScript runtime built on Chrome's V8 JavaScript engine.
 
-    - Install [Visual Studio Code](https://code.visualstudio.com/)
-    - Install [NodeJS](https://nodejs.org/en/)
+  Go to https://nodejs.org, download and install the long-term support package which is recommended for most users - *current version is `16.17.0 LTS`*
 
-:::note  
-Restart your computer for NodeJS CLI takes effect!
-:::
+  After installing, run a command-line terminal, run command `npm -v`. If it shows you `16.17.0`, then you can start using VS Code. If any error occurs, just restart your computer.
 
-3. **Get default Ari up and running locally**
+3. **Git** - a free and open-source software for distributed version control.
 
-  To ensure that your local development environment is correctly configured.
+  Go to https://git-scm.com/download, download and install `Git`.
 
-    + Extract your Ari *(the Zip file which you downloaded after purchased)* to desired folder.
-    + Use Visual Studio Code to open this folder *(File -> Open folder...)*
-    + Open the terminal *(Ctrl + `)* and run following command exact order:
-      * `npm install` - this would take you 5-10 minutes to finish the installation
-      * `npm run build` - less than 30 seconds
-      * `npm run start` - a couple of seconds to start the local server
+  We need to config settings to get `Git` and `GitHub` connected. Open a command-line terminal, run following commands *(don't forget to replace `your-email` and `your-name` by yours)*:
 
-    Ari should be up and running for now 🎉.
+  ```
+  git config --global user.email "your-email"
+  git config --global user.name "your-name"
+  ```
+
+  :::note
+  You can install `Git` later when you want to push your website to GitHub. Not required if you just run Ari locally.
+  :::
+
+<details>
+<summary>Notes for installing Git in Windows</summary>
+
+- Select Destination Location => keep default settings
+- Select Components => keep default settings
+- Select Start Menu Folder => keep default settings
+- Choosing the default editor used by Git => Choose `Use Visual Studio Code as Git's default editor`
+- Adjusting the name of the initial branch in new repositories => keep default settings
+- Adjusting your PATH environment => keep default settings
+- Choosing the SSH executable => keep default settings
+- Choosing HTTPS transport backend => keep default settings
+- Configuring the line ending conversions => Choose: `Checkout as-is, commit Unix-style line endings`
+- Configuring the terminal emulator to use with Git Bash => keep default settings
+- Choose the default behavior of "git pull" => keep default settings
+- Choose a credential helper => keep default settings
+- Configuring extra options => keep default settings
+- Configuring experimental options => keep default settings
+
+</details>
+
+## Run Ari locally
+
+To ensure that your local development environment is correctly configured.
+
+- Extract your Ari *(the Zip file which you downloaded after purchased)* to desired folder.
+- Use Visual Studio Code to open this folder *(File -> Open folder...)*
+- Open the terminal inside VS Code *(Ctrl + `)*  and run following command exact order:
+
+  * `npm install` - this would take you 5-10 minutes to finish the installation
+  * `npm run build` - less than 30 seconds
+  * `npm run start` - a couple of seconds to start the local server
+
+Ari should be up and running for now 🎉.
 
 :::note  
 To stop the local server, (make sure the terminal is active) press `Ctrl + C`
 :::
 
-<details>
+## Video
 
-<summary>Extensions for Visual Studio Code</summary>
-
-**Basic**
-
-- Auto Close Tag (Jun Han)
-- Auto Import (steoates)
-- Auto Rename Tag (Jun Han)
-- MDX (unified) => This helps highlight syntax in MDX files
-- Text Power Tools (Dániel Tar) => Slugify your text
-
-**Advanced**
-
-- Better Comments (Aaron Bond)
-- Duplicate selection or line (Greg Bacchus)
-- ESLint (Microsoft)
-- File Utils (Steffen Leistner)
-- Headwind (Ryan Hebourn)
-- IntelliCode (Microsoft)
-- Output Colorizer (IBM)
-- Prettier - Code formatter (Prettier)
-- Tailwind CSS IntelliSense (Tailwind Labs)
-
-</details>
-
-4. **Update Ari's configuration**
-
-  Open and update all available information which you have at **`app\data\settings\config.tsx`**.
-
-5. **Design and Prepare data for your personal website**
-
-  You need to prepare something:
-    - A logo of yours *(it should be your avatar, for this is your personal website)*
-    - Your personal information
-    - Icons (https://icons8.com/icons, https://www.flaticon.com,...)
-    - Pictures for your website (https://unsplash.com)
-
-6. **Testing the Ari locally**
-
-  Let you run `npm run dev` to start the local server to preview your website. When you save any changes, local server will automatically be updated accordingly.
-
-  :::info
-  Don't forget to read [files structure](../advanced-guides/files-structure.mdx) to build your awareness about the structure of Ari.
-  :::
-
-7. **Deploy your website to Cloudflare Pages**
-
-  **Git setup**
-
-  - Open Visual Studio Code
-  - Open Ari folder (File -> Open Folder...)
-  - Go to Source Control page (Ctrl+Shift+X)
-  - Click Install Git button
-
-  **Declare GitHub account**
-
-  - Open goto Terminal window of Visual Studio Code, run following command
-
-    ```
-    git config --global user.email "demo1@chasoft.net"
-    git config --global user.name "Brian"
-    ```
-
-    `user.email` is email which you registered GitHub account
-    `user.name` is your name or whatever name you want.
-
-    **Deploy to GitHub repository**
-
-    After installing **git**, let you restart your Visual Studio Code.
-
-    - Go to Source Control Page (Ctrl+Shift+X)
-    - Click a new button called "Publish to GitHub repository"
-    - A dropdown menu will be showed, and let you enter your repository name and remember to choose **private repository** *(do not choose **public repository**)*
-
-    If any dialog showe to ask you to login to GitHub, just do it. Let you choose `Browser` open.
-
-:::warning
-Publish `ari` to **private** repository, not public repository. For ari is not open-source application.
-:::
-
-  **Deploy to Cloudflare pages**
-
-  - Sign in to Cloudflare
-  - Go to Pages, connect to git => github
-  - Create a project => choose your repository
-  - Choose **Remix** as your framework
-  
-  That's it. Enjoy your website! Promote our website through any channels you have available!
-
-## Local with Visual Studio Code
-
-<div className="video-container">
-  <LiteYouTubeEmbed
-    id="YEFoHFK5ydU"
-    playlist={false}
-    title="Setup local development environment with Visual Studio Code"
-    poster="hqdefault"
-    noCookie={true}
-  />
-</div>
-
-## Cloud with Gitpod.io
-
-<div className="video-container">
-  <LiteYouTubeEmbed
-    id="YEFoHFK5ydU"
-    playlist={false}
-    title="Setup local development environment with Visual Studio Code"
-    poster="hqdefault"
-    noCookie={true}
-  />
-</div>
+I will update the video soon...

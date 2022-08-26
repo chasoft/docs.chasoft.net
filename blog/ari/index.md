@@ -1,28 +1,13 @@
 ---
-slug: ari-your-powerful-serverless-personal-website
-title: Ari - Serverless Personal Website
+slug: why-you-should-have-a-personal-website
+title: Why you should have a personal website?
 authors: [brian]
-tags: [website, product, serverless]
+tags: [website, why, personal website]
 date: 2022-08-20T11:00
 ---
 
-[Docusaurus blogging features](https://docusaurus.io/docs/blog) are powered by the [blog plugin](https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-blog).
-
-Simply add Markdown files (or folders) to the `blog` directory.
-
-Regular blog authors can be added to `authors.yml`.
+Why?
 
 <!--truncate-->
 
-The blog post date can be extracted from filenames, such as:
-
-- `2019-05-30-welcome.md`
-- `2019-05-30-welcome/index.md`
-
-A blog post folder can be convenient to co-locate blog post images:
-
-![Docusaurus Plushie](./docusaurus-plushie-banner.jpeg)
-
-The blog supports tags as well!
-
-**And if you don't want a blog**: just delete this directory, and use `blog: false` in your Docusaurus config.
+i don't know

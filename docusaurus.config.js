@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Chasoft Labs',
-  tagline: 'Here you will find a comprehensive guide to all the products from Chasoft Labs',
+  tagline: 'Here you will find a comprehensive guide to all products from Chasoft Labs',
   url: 'https://docs.chasoft.net',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -60,7 +60,7 @@ const config = {
       navbar: {
         title: 'Chasoft Labs',
         logo: {
-          alt: 'Chasoft Labs Documentation ',
+          alt: 'Chasoft Labs Documentation',
           src: 'img/logo.png',
         },
         items: [
@@ -82,24 +82,36 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'Products',
             items: [
               {
-                label: 'Docs',
-                to: '/docs/intro',
+                label: 'Chasoft Store',
+                to: 'https://store.chasoft.net',
+              },
+              {
+                label: 'Ari - Serverless Website',
+                to: 'https://store.chasoft.net/l/ari-elegant-and-powerful-serverless-website',
               },
             ],
           },
           {
-            title: 'Community',
+            title: 'Support',
             items: [
               {
-                label: 'Facebook',
+                label: 'Email',
+                href: 'mailto:support@chasoft.net',
+              },
+              {
+                label: 'Facebook (DM)',
                 href: 'https://facebook.com/hongying.gao',
               },
               {
-                label: 'Twitter',
+                label: 'Twitter (DM)',
                 href: 'https://twitter.com/vBizChain',
+              },
+              {
+                label: 'Telegram',
+                to: 'https://store.chasoft.net/l/telegram-support-channel-for-ari',
               },
             ],
           },

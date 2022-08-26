@@ -6,11 +6,11 @@ sidebar_position: 1
 
 <div style={{textAlign: 'center'}}>
 
-![ari banner](./img/ari-banner-front-clean-2.webp)
+![Helps you to ship a full-featured & lightning fast website that you will be confident](./img/ari-banner-front-clean-2.webp)
 
 </div>
 
-⚡️ Ari will help you ship a **lightning fast website** that you will be confident.
+⚡️ Ari will help you to ship a **lightning fast website** that you will be confident.
 
 💯 **Advanced searching** feature helps your visitor searching, filtering the easy way any data by any keywords. Besides, **“what's new”** information central helps you to navigate and be able to share any pages.
 
@@ -72,13 +72,7 @@ Ari is born to be a better personal website for everyone: `Simple`, `Dynamic` an
 - ⚡️ **Lightning-fast**. Ari is built using Remix Web Framework, focus in web fundamental.
 - 🦖 **Accessible**. Attention to accessibility, making your site equally accessible to all users.
 
-## Release history {#release-history}
-
-```
-2022-Aug-23: Initial release of Ari (v1.0.0)
-```
-
-## Why Ari? {#whyAri}
+## Why Ari? {#why-ari}
 
 - Built by Remix Web Framework. Great framework to build better website and apps.
 - 30+ content blocks. Core pages are connected. All fully documented with guides and video tutorials.
@@ -88,7 +82,7 @@ Ari is born to be a better personal website for everyone: `Simple`, `Dynamic` an
 
 Finally, you would have a very fast website which helps you to express everything *(oh, your real personal website)* to support your job, your personal business, your personal interests. You are confident to have a name card with only your name and a domain on it, and say: *"let you check my website for details"*.
 
-Let's start your online presence today.
+Visit [our store](https://store.chasoft.net/l/ari-elegant-and-powerful-serverless-website) and purchase a license to start your online presence today.
 ## Is something missing? {#something-missing}
 
 If you find issues with the documentation or have suggestions on how to improve the documentation or the project in general, please [file an issue](https://github.com/chasoft/docs.chasoft.net) for us, or send a tweet mentioning the [@vBizChain](https://twitter.com/vBizChain) Twitter account.

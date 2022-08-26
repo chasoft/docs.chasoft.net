@@ -7,29 +7,62 @@ sidebar_position: 30
 Frequently asked questions about **`Ari`**
 
 <details>
-<summary>What is “what's new” information central?</summary>
+<summary>I get lost, I don't know what to do!</summary>
 
-...
+Great to see you here! We can summarize all activities related to Ari as below:
+
+1. You [purchased Ari](https://store.chasoft.net/l/ari-elegant-and-powerful-serverless-website) 😘😍
+2. You [set up local development environment](./installation.md)
+3. You [update the configuration](./configuration.md) of the application 🔥 *(you would come back to this step to do updating your site's settings to fit your requirements and/or requirements)*.
+4. You take a look at [Ari's files structure](../advanced-guides/files-structure.mdx)
+5. You read all articles in [guides section](../guides/)
+6. You start experimenting to update Ari locally 🔥 *(this would take a lot of time or if you want to avoid spending your time, then, contact me to spend your money 😅)*
+7. When you have any questions, try to find in our [documentation](https://docs.chasoft.net/docs/ari/intro), or ask me via [email](mailto:support@chasoft.net). Or if you need the highest support priority, you can check my subscription package [Telegram Support Channel for Ari](https://store.chasoft.net/l/telegram-support-channel-for-ari) which will allows you to ask for support via Telegram.
+8. Finally, you [deploy your website to Cloudflare](../guides/deployment.md) ✈🎉.
+
+I know that you would need many efforts. That's why we say *"**build** your website"*. When everything is well done. You need to update your website regularly and build your great online presence to support your business 💯 or personal interests 💯.
+
+Updating Ari is much more simple.
+
+1. Open Visual Studio Code
+2. Do the update: add new blog post, or new portfolio article, or new announcements, or new notes, or new updates.
+3. Run `npm run dev` to preview your changes locally.
+4. Go to `Source Control` panel *(Ctrl+Shift+G)* > for changes files, select all and choose `Stage changes` from popup menu > write some notes > Click `Commit` button to commit changes to GitHub.
+
+That's all. When you have new commits to GitHub, Cloudflare Pages will automatically deploy your changes. Basically, you will need to deal with updating Ari and commit to GitHub. The deployment is automatic 😎⚡.
 
 </details>
 
 <details>
-<summary>Question 2</summary>
+<summary>Why must I use a `private GitHub` repository for Ari?</summary>
 
-Answer 2 
-
-</details>
-
-<details>
-<summary>Question 3</summary>
-
-Answer 3
+**Ari is not an open-source software**. So, please kindly keep your GitHub repository be `private`, or your repository would be taken down by the [DCMA policy](https://en.wikipedia.org/wiki/Defense_Contract_Management_Agency) and your license would be rejected.
 
 </details>
 
 <details>
-<summary>Question 4</summary>
+<summary>Where can I deploy my Ari?</summary>
 
-Answer 4
+**Ari** could be ported to run on any serverless platform _(thanks to [Remix Web Framework](https://remix.run/))_ such as:
+
+* AWS
+* Cloudflare worker
+* FlyIo
+* Netlify
+* Vercel
+* Any Express server
+
+but for the very first version of **Ari** _(1.x)_, we only support to deploy to **`Cloudflare Pages`**. The reason is that **Ari** (1.x) focus on `standalone spirit` and `affordable spirit`. You would have a powerful Serverless Personal Website for `FREE` when deploy to `Cloudflare Pages`
+
+In my experience, Cloudflare Pages is the best provider for such application as Ari.
+
+</details>
+
+<details>
+<summary>What do you mean when saying "Ari has a `centralized information`"?</summary>
+
+Ari has following dataType: `blog posts`, `portfolio`, `announcements`, `notes`, and `updates` which help you express almost everything you want as a personal website. And all data are all **connected** by 2 great features of Ari. They are: **`What's news?`** *(aka `latest updates`)* and **`Searching feature`** *(which can search for any data)*.
+
+`What's news?` is sometime called `centralized information`.
 
 </details>
