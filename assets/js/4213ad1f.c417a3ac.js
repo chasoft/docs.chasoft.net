@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs_chasoft_net=self.webpackChunkdocs_chasoft_net||[]).push([[7502],{7510:s=>{s.exports=JSON.parse('{"label":"new skills","permalink":"/blog/tags/new-skills","allTagsPath":"/blog/tags","count":1}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs_chasoft_net=self.webpackChunkdocs_chasoft_net||[]).push([[1069],{6571:e=>{e.exports=JSON.parse('{"label":"knowledge","permalink":"/blog/tags/knowledge","allTagsPath":"/blog/tags","count":1}')}}]);

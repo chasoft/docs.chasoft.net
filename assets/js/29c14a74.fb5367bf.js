@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs_chasoft_net=self.webpackChunkdocs_chasoft_net||[]).push([[2614],{8834:a=>{a.exports=JSON.parse('{"label":"ari","permalink":"/blog/tags/ari","allTagsPath":"/blog/tags","count":1}')}}]);
