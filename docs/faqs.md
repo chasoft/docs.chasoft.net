@@ -43,17 +43,3 @@ You can google for what you want. I often get icons and pictures from these webs
 - https://unsplash.com - for pictures
 
 </details>
-
-<details>
-<summary>Question 3</summary>
-
-Answer 3
-
-</details>
-
-<details>
-<summary>Question 4</summary>
-
-Answer 4
-
-</details>

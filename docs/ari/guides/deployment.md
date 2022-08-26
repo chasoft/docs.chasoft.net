@@ -6,7 +6,7 @@ sidebar_position: 50
 
 ![ari 1.x deployment model](./img/ari-1.x-deployment-model.webp)
 
-Deploy a serverless to Cloudflare Pages can not be easier. First you need to create a [private](../getting-started/faqs.md) GitHub repository and publish your Ari there. The next step is to go to Cloudflare Pages and publish your website with just a few clicks.
+Deploy a serverless to Cloudflare Pages can not be easier. First you need to create a [private](../getting-started/faqs.mdx) GitHub repository and publish your Ari there. The next step is to go to Cloudflare Pages and publish your website with just a few clicks.
 
 :::info
 To check whether you declare email *(which is used to register GitHub)* with Git or not, try following command:
