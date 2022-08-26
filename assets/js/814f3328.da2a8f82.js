@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocs_chasoft_net=self.webpackChunkdocs_chasoft_net||[]).push([[2535],{5641:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"Ari - Serverless Personal Website","permalink":"/blog/ari-your-powerful-serverless-personal-website"},{"title":"Hello world","permalink":"/blog/hello-world"}]}')}}]);

@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocs_chasoft_net=self.webpackChunkdocs_chasoft_net||[]).push([[324],{7149:s=>{s.exports=JSON.parse('{"label":"startup","permalink":"/blog/tags/startup","allTagsPath":"/blog/tags","count":1}')}}]);
