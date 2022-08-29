@@ -1,6 +1,6 @@
 ---
 id: releases
-slug: /releases
+slug: /ari/releases
 ---
 
 # Releases notes
