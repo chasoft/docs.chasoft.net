@@ -9,6 +9,18 @@ Ari is continuously enhanced and updated, and a new version is released every on
 
 Below are the highlights of the last and previous versions.
 
+## Maintenance Release 1.1.3
+
+Released 2022-Aug-29
+
+- Add a searching status when searching is in progress
+- Add navigation in blog better with categories and tags
+- Remove custom font, use the default system font. Better performance in mobile and PageSpeed Insights is over `90/100` both mobile and desktop.
+- Remove unnecessary animation
+- Fixed some CSS issues
+- Fixed `GotoTop` component not display in correct position
+- Move `searchOptions` to `config.ts`
+
 ## Maintenance Release 1.1.2
 
 Released 2022-Aug-25
