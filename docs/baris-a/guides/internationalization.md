@@ -101,7 +101,7 @@ And if you do anything wrong, the typescript would alert with incorrect content.
 
 ## Use the translation files
 
-Baris-A is designed to be simple, just assign the language file to page's settings. There is no more step. Just that. Please review [create a page](./create-a-page.mdx) guide for details.
+Baris-A is designed to be simple, just assign the language file to page's settings. There is no more step. Just that. Please review [create a page](../guides/create-a-page.mdx) guide for details.
 
 Following is a sample of the homepage file.
 
