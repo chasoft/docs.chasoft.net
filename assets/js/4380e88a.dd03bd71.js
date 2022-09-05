@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs_chasoft_net=self.webpackChunkdocs_chasoft_net||[]).push([[9223],{233:e=>{e.exports=JSON.parse('{"title":"Aris - Powerful Serverless App for Personal Websites","slug":"/aris","permalink":"/docs/aris","navigation":{"previous":{"title":"Welcome","permalink":"/docs/intro"},"next":{"title":"Introduction","permalink":"/docs/aris/intro"}}}')}}]);

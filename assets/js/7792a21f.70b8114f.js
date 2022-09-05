@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocs_chasoft_net=self.webpackChunkdocs_chasoft_net||[]).push([[6716],{4011:(e,t,a)=>{a.r(t),a.d(t,{default:()=>l});var c=a(7294),n=a(4669);function l(){return c.createElement(n.Z,null,c.createElement("h1",null,"My React page"),c.createElement("p",null,"This is a React page"))}}}]);
