@@ -24,20 +24,10 @@ sidebar_position: 1
 
 In this video, the author will show you a brief introduction about Baris-A and its features.
 
-```mdx-code-block
-import LiteYouTubeEmbed from 'react-lite-youtube-embed';
+:::info
+Video is under exporting...
+:::
 
-<div className="video-container">
-  <LiteYouTubeEmbed
-    id="YEFoHFK5ydU"
-    playlist={false}
-    title="Baris-A: Serverless Template for Personal Websites"
-    poster="hqdefault"
-    noCookie={true}
-  />
-</div>
-
-```
 ## Features {#features}
 
 Baris-A is built with high attention to `standalone application` which all data are stored in GitHub repository, no database, no backup, but still having the power of dynamic websites. Thanks to [Remix Web Framework](https://remix.run).
