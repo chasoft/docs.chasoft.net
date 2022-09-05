@@ -1,0 +1,92 @@
+---
+sidebar_position: 80
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import BrowserWindow from '@site/src/components/BrowserWindow';
+
+# Markdown
+
+Lists of all supported markdown syntaxes and examples
+
+## Format text
+
+Formatting text in markdown is simple, and you can do it as you're typing.
+
+```
+# This is H1
+
+The **quick fox** jumps over the _lazy_ dog.
+
+## This is H2
+
+The quick fox fly jumps over the _**lazy**_ dog.
+
+1. fox
+2. dog
+3. lazy
+
+### This is H3
+
+> All Things are Difficult Before they are Easy
+
+Ut `pariatur ad ea aute ullamco velit commodo`.
+Laboris consectetur culpa aute. **`Aliqua`** consectetur id irure.
+
+- item 1
+- item 2
+- item 3
+
+```
+
+<BrowserWindow>
+
+## This is H2
+
+The **quick fox** jumps over the _lazy_ dog.
+
+### This is H3
+
+The quick fox fly jumps over the ***lazy*** dog.
+
+---
+
+#### This is H4
+
+> All Things are Difficult Before they are Easy
+
+Ut `pariatur ad ea aute ullamco velit commodo`.
+Laboris consectetur culpa aute. **`Aliqua`** consectetur id irure.
+
+</BrowserWindow>
+
+:::info
+
+There are two ways to make the text **italic**: `_italic_` or `*italic*`. And there are three ways to make the text both **bold and italic**: `***bold***` or `**_bold_**` or `_**bold**_`
+
+:::
+
+## Table
+
+Tables in markdown is a bit complicated. And if you are not very familiar with markdown, you can use the following table example or using https://stackedit.io/app
+
+```
+| | Regular | Extended |
+|--|:--:|:--:|
+| **Number of end products** | 1 | unlimited |
+| **Use in a single end product** | ✅ | ✅ |
+| **Use in an end product that's sold** | ❌ | ✅ |
+| **On-demand products/services**<br />_(e.g. "made to order" or "create your own" apps and sites)_ | ❌ | ✅ |
+```
+
+<BrowserWindow>
+
+| | Regular | Extended |
+|--|:--:|:--:|
+| **Number of end products** | 1 | unlimited |
+| **Use in a single end product** | ✅ | ✅ |
+| **Use in an end product that's sold** | ❌ | ✅ |
+| **On-demand products/services**<br />_(e.g. "made to order" or "create your own" apps and sites)_ | ❌ | ✅ |
+
+</BrowserWindow>

@@ -1,0 +1,9 @@
+{
+  "label": "Advanced Guides",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "Some advanced guides when using Ari - Your powerful personal website.",
+    "slug": "/baris-a/advanced-guides"
+  }
+}

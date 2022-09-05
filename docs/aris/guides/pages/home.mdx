@@ -1,0 +1,416 @@
+---
+sidebar_position: 5
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Home
+
+Your front page 🏡, the page that your visitors will see when they access your `root` domain. You can create your own personalized version depending on your interests.
+
+Of course, you can use any [content blocks](../content-blocks.mdx) but the `homepage` should be concise, tidy and providing overview information only. We have some recommended content blocks for your reference.
+
+Homepage file is **`app\routes\__layout\index.tsx`**. It is safe for you to edit the lines between the markers.
+
+<Tabs>
+<TabItem value="File">
+
+```ts title="app\routes\__layout\index.tsx"
+...
+{
+  /*********************************
+  * 
+  *   START PAGE CONTENT 
+  * 
+  ********************************/
+}
+
+//place your content for homepage here
+
+{
+  /*********************************
+  * 
+  *   END PAGE CONTENT 
+  * 
+  ********************************/
+}
+...
+````
+
+</TabItem>
+<TabItem value="Content blocks">
+
+Recommended content blocks for your homepage
+
+- [LinksGrid](../content-blocks.mdx#linksgrid)
+- [LatestPortfolio](../content-blocks.mdx#latestportfolio)
+- [LatestBlogPosts](../content-blocks.mdx#latestblogposts)
+- [LinksList](../content-blocks.mdx#linkslist)
+- `forewords`
+
+</TabItem>
+<TabItem value="Examples">
+
+```tsx
+<LinksGrid links={linksGrid} className="mb-10" />
+
+<LatestPortfolio
+  display={["title", "image", "description"]}
+  limit={2}
+/>
+
+<LatestBlogPosts
+  display={["title", "image"]}
+  limit={2}
+  showAsColumn
+/>
+
+<LatestContent.Note />
+<LatestContent.Announcement />
+<LatestContent.Update />
+
+<Markdown.Wrapper>
+  <Component />
+</Markdown.Wrapper>
+
+<TextHeader text={t("Curated links for your best")} />
+<LinksList links={linksList} className="my-10" />
+```
+
+</TabItem>
+</Tabs>
+
+## 📝 Forewords block
+
+All content should be composed using Markdown format. That's why we created a special file just for you to write for the homepage.
+
+- Data file is `~/data/content/foreword.mdx`. Open this file, and please don't hesitate to edit, write... anything you like.
+- To display this content, you would need to:
+  1. Import the files to `app\routes\__layout\index.tsx`. But don't worry, it is declared already.
+
+    ```ts
+    import Component from "~/data/content/foreword.mdx"
+    import Markdown from "~/components/Markdown"
+    ```
+
+  2. Paste this code to the your desired place in `app\routes\__layout\index.tsx`
+  
+    ```tsx
+    <Markdown.Wrapper>
+      <Component />
+    </Markdown.Wrapper>
+    ```
+
+## 🤔 Want homepage as bioLink?
+
+If you want your homepage as a bioLink, which display a list of links. You can use the following samples:
+
+<Tabs>
+<TabItem value="Examples 1">
+
+```tsx
+<TextHeader text={t("Curated links for your best")} />
+<LinksList links={linksList} className="my-10" />
+```
+
+</TabItem>
+<TabItem value="Data">
+
+```ts
+export const linksList: LinkMeta[] = [
+  {
+    type: undefined,
+    title: "Upcoming events",
+    description: "Upcoming events",
+    slug: "/",
+    iconPicture: undefined
+  },
+  {
+    type: "zip",
+    title: "All chess matches with comments",
+    description: "Collected from 3 millions matches",
+    slug: "/",
+    iconPicture: undefined,
+    decoration: {
+      backgroundColor: ["blue", "red", "white"]
+    }
+  },
+  {
+    type: "xls",
+    title: "Dashboard for lazy man",
+    description: "Automate your daily tasks",
+    slug: "/",
+    iconPicture: undefined,
+    decoration: {
+      isBold: true,
+      isItalic: true
+    }
+  },
+  {
+    type: "youtube",
+    title: "My programming youtube channel",
+    slug: "/contact",
+    iconPicture: undefined,
+    decoration: {
+      isItalic: true
+    }
+  },
+  {
+    type: "cv",
+    title: "Curriculum vitae of Brian",
+    slug: "/files/mycv.pdf",
+    iconPicture: "/img/background/placeholder.svg",
+    decoration: {
+      isDownloadable: true
+    }
+  },
+]
+```
+
+</TabItem>
+<TabItem value="Type declaration">
+
+```ts
+/**
+ * This is to build links list for homepage
+ * to fullfill the features of biolink services
+ */
+type LinkMeta = {
+  /**
+   * if you set a type for a link
+   * we will show an icon for the link (default icon)
+   * if you don't set imageUrl.
+   */
+  type?: LinkMetaType
+  title: string,
+  description?: string
+  slug: string,
+  iconPicture?: string,
+  decoration?: {
+    /**
+     * we will fill gradient the background
+     * 1st & 2nd is background gradient
+     * 3rd is text-color
+     */
+    backgroundColor?: [string, string, string]
+    isTextCenter?: boolean
+    isBold?: boolean
+    isItalic?: boolean
+    isDownloadable?: boolean
+  }
+}
+
+type LinkMetaType =
+  | "pdf"
+  | "doc"
+  | "link"
+  | "youtube"
+  | "ppt"
+  | "powerpoint"
+  | "excel"
+  | "xls"
+  | "word"
+  | "cv"
+  | "resume"
+  | "facebook"
+  | "linkedin"
+  | "tiktok"
+  | "instagram"
+  | "messenger"
+  | "hotline"
+  | "telephone"
+  | "phone"
+  | "shopping"
+  | "video"
+  | "laptop"
+  | "computer"
+  | "hardware"
+  | "zip"
+```
+
+</TabItem>
+</Tabs>
+
+Or you can combine `LinksGrid` and `LinksList`
+
+<Tabs>
+<TabItem value="Examples 2">
+
+```tsx
+<LinksGrid links={linksGrid} className="mb-10" />
+<TextHeader text={t("Curated links for your best")} />
+<LinksList links={linksList} className="my-10" />
+```
+
+</TabItem>
+<TabItem value="Data">
+
+```ts
+export const linksGrid: LinkMeta[] = [
+  {
+    title: "link1",
+    slug: "/about",
+    iconPicture: "/img/background/placeholder.svg",
+  },
+  {
+    title: "link2",
+    slug: "/terms-of-service",
+    iconPicture: "/img/background/placeholder.svg",
+  },
+  {
+    title: "link3",
+    slug: "https://twitter.com/",
+    iconPicture: "/img/background/placeholder.svg",
+    decoration: {
+      isBold: true,
+      isItalic: true
+    }
+  },
+  {
+    title: "link4",
+    slug: "/contact",
+    iconPicture: "/img/background/placeholder.svg",
+    decoration: {
+      isItalic: true
+    }
+  }
+]
+
+export const linksList: LinkMeta[] = [
+  {
+    type: undefined,
+    title: "Upcoming events",
+    description: "Upcoming events",
+    slug: "/",
+    iconPicture: undefined
+  },
+  {
+    type: "zip",
+    title: "All chess matches with comments",
+    description: "Collected from 3 millions matches",
+    slug: "/",
+    iconPicture: undefined,
+    decoration: {
+      backgroundColor: ["blue", "red", "white"]
+    }
+  },
+  {
+    type: "xls",
+    title: "Dashboard for lazy man",
+    description: "Automate your daily tasks",
+    slug: "/",
+    iconPicture: undefined,
+    decoration: {
+      isBold: true,
+      isItalic: true
+    }
+  },
+  {
+    type: "youtube",
+    title: "My programming youtube channel",
+    slug: "/contact",
+    iconPicture: undefined,
+    decoration: {
+      isItalic: true
+    }
+  },
+  {
+    type: "cv",
+    title: "Curriculum vitae of Brian",
+    slug: "/files/mycv.pdf",
+    iconPicture: "/img/background/placeholder.svg",
+    decoration: {
+      isDownloadable: true
+    }
+  },
+]
+```
+
+</TabItem>
+<TabItem value="Type declaration">
+
+```ts
+/**
+ * This is to build links list for homepage
+ * to fullfill the features of biolink services
+ */
+type LinkMeta = {
+  /**
+   * if you set a type for a link
+   * we will show an icon for the link (default icon)
+   * if you don't set imageUrl.
+   */
+  type?: LinkMetaType
+  title: string,
+  description?: string
+  slug: string,
+  iconPicture?: string,
+  decoration?: {
+    /**
+     * we will fill gradient the background
+     * 1st & 2nd is background gradient
+     * 3rd is text-color
+     */
+    backgroundColor?: [string, string, string]
+    isTextCenter?: boolean
+    isBold?: boolean
+    isItalic?: boolean
+    isDownloadable?: boolean
+  }
+}
+
+type LinkMetaType =
+  | "pdf"
+  | "doc"
+  | "link"
+  | "youtube"
+  | "ppt"
+  | "powerpoint"
+  | "excel"
+  | "xls"
+  | "word"
+  | "cv"
+  | "resume"
+  | "facebook"
+  | "linkedin"
+  | "tiktok"
+  | "instagram"
+  | "messenger"
+  | "hotline"
+  | "telephone"
+  | "phone"
+  | "shopping"
+  | "video"
+  | "laptop"
+  | "computer"
+  | "hardware"
+  | "zip"
+```
+
+</TabItem>
+</Tabs>
+
+Then, you would have a very **elegant** homepage as you wish.
+
+<div style={{textAlign: 'center'}}>
+
+![mobile home preview](./img/mobile-home-preview.webp)
+
+</div>
+
+## Video tutorial
+
+```mdx-code-block
+import LiteYouTubeEmbed from 'react-lite-youtube-embed';
+
+<div className="video-container">
+  <LiteYouTubeEmbed
+    id="YEFoHFK5ydU"
+    playlist={false}
+    title="Introduction about Home page"
+    poster="hqdefault"
+    noCookie={true}
+  />
+</div>
+```

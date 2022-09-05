@@ -1,0 +1,58 @@
+---
+sidebar_position: 20
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Blog & Portfolio
+
+There is no `blog` and `Portfolio` in Baris-A. All you have are `pages` and `pages`. But you still create your own simple **blog** or **portfolio** with pages. The idea is as following:
+
+- **Your blog page**: create a page with `slug = "/blog"`
+- **Your blog post page**: create a page with `slug = "/blog/blog-post-name"` and at the head of each child page, let you place a `breadcrumbs`. The same code as below:
+
+```ts
+const article1: Page = {
+	settings: {
+		title: "My blog post title",
+		subTitle: "The blog post's category Name",
+		description: "A short description of the blog post",
+    //highlight-next-line
+		slug: "/blog/an-article",
+		hideSidebarInSmallScreen: true,
+    ...
+	},
+	content: [
+		{
+			type: "breadcrumbs",
+			data: [
+				{ title: "Blog", slug: "/blog" },
+				{ title: "Category name", slug: "/category-name" },
+				{ title: "My blog post title" },
+			]
+		},
+		{
+			...
+		},
+    ...
+    {
+			...
+		},
+	]
+}
+
+export default article1
+```
+
+After all you would have a structure like this:
+
+- https : //your-domain.com/blog
+- https : //your-domain.com/blog/article-1
+- https : //your-domain.com/blog/article-2
+- https : //your-domain.com/blog/article-3
+
+
+:::info
+Do not forget to declare all your pages in `app\data\pages\index.ts`
+:::

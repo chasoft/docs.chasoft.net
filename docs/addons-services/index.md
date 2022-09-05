@@ -1,6 +1,5 @@
 ---
 id: addons-services
-slug: /addons-services
 ---
 
 # Add-ons Services

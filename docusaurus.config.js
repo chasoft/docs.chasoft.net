@@ -89,7 +89,7 @@ const config = {
                 to: 'https://store.chasoft.net',
               },
               {
-                label: 'Ari - Serverless Website',
+                label: 'Aris - Serverless Website',
                 to: 'https://store.chasoft.net/l/ari-elegant-and-powerful-serverless-website',
               },
             ],

@@ -1,0 +1,175 @@
+---
+sidebar_position: 10
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import BrowserWindow from '@site/src/components/BrowserWindow';
+
+# Create a page
+
+## Page Overview
+
+`Page` is everything you need to know about, to design your website wich Baris-A. Page has 2 sections:
+
+```ts
+type Page = {
+	settings: PageSettings
+	content: PageContent
+}
+```
+
+- **Settings**: All behaviors of your page.
+
+  <details>
+
+  <summary>Type declaration of page settings</summary>
+
+  ```ts
+  type PageSettings = {
+    /**
+     * BASIC
+     */
+    title: string
+    subTitle: string
+    description: string
+    /**
+     * NAVIGATION
+     * slug="/contact" => your-domain.com/contact
+     * slug="/contact/details" => your-domain.com/contact/details
+     */
+    slug: string
+    /**
+     * PAGE BANNERS
+     */
+    banners: ImgSrcSet[]
+    isFullHeight: boolean
+    defaultBanners: boolean
+    bannersExtra: BannersExtraProps
+    /**
+     * LANGUAGES
+     * if you don't want multi-language => `language={}`
+     */
+    language: LangTable | undefined
+    /**
+     * SIDE-BAR
+     */
+    showProfileSidebar: boolean
+    hideSidebarInSmallScreen: boolean
+  }
+  ```
+
+  </details>
+
+- **Content**: Content of your page
+
+  <details>
+
+  <summary>Type declaration of page content</summary>
+
+  ```ts
+  type PageContent = Array<(
+    {
+      type: "headerBlock"
+      data: {...}
+    } | {
+      type: "textBlock"
+      data: {...}
+    } | {
+      type: "quoteBlock"
+      data: {...}
+    } | {
+      type: "list"
+      data: ListItem[]
+    } | {
+      type: "text"
+      data: MarkdownText
+      compact?: boolean
+      lang?: Language
+    } | {
+      type: "categoryGrid"
+      data: []
+    } | {
+      type: "imageGrid"
+      data: []
+    } | {
+      type: "youtube"
+      data: {...}
+    } | {
+      type: "video"
+      data: {...}
+    } | {
+      type: "resume.education"
+      data: []
+    } | {
+      type: "resume.experience"
+      data: []
+    } | {
+      type: "image"
+      data: {...}
+    } | {
+      type: "links"
+      data: []
+    } | {
+      type: "facts"
+      data: []
+    } | {
+      type: "telephone"
+      data: {..}
+    } | {
+      type: "email"
+      data: {..}
+    } | {
+      type: "address"
+      data: {..}
+    }  | {
+      type: "telephone-email" | "email-telephone"
+      data: {...}
+    } | {
+      type: "contactForm"
+    } | {
+      type: "faqs",
+      data: []
+    } | {
+      type: "map",
+      data: {...}
+    } | {
+      type: "breadcrumbs",
+      data: []
+    }
+  )>
+  ```
+
+  </details>
+
+## Some behaviors
+
+Some behaviors you should be aware.
+
+- The language file is optional. If you only support one language, just ignore the language files.
+- The path of you page is declare at `slug`:
+  ```ts
+  settings: {
+    ...
+    /**
+     * NAVIGATION
+     * slug="/contact" => your-domain.com/contact
+     * slug="/contact/details" => your-domain.com/contact/details
+     */
+    slug: "/about",
+    ...
+  ```
+
+:::info
+
+Let you open each pre-made page and see the data. Then you will understand how everything is working. I have some statements which you should be aware.
+
+- The three following default folders are just to arrangment the files. You can can create any folders, or not using any folder at all, all should be all right. Just put your `page files` inside `\app\data\pages` 
+
+  + `\app\data\pages\blog`
+  + `\app\data\pages\default`
+  + `\app\data\pages\optional`
+
+- Do not forget to declare your files in `app\data\pages\index.ts`. Baris-A read this file to do his job.
+
+:::

@@ -20,15 +20,28 @@ function HomepageHeader() {
           
           <Link
             className="button button--secondary button--lg"
-            style={{ textAlign: 'left'}}
-            to="/docs/ari/intro">
-            <span style={{ display: "block", textDecoration: "underline", fontWeight: "bolder" }}>Latest product</span>
+            style={{ textAlign: 'center', margin: "16px"}}
+            to="/docs/aris/intro">
+            <span style={{ display: "block", textDecoration: "underline", fontWeight: "bolder", width: "100%", textAlign: "left" }}><span style={{ color: "#2e8555"}}>Featured</span> product</span>
             <img
-              src="/img/ari-banner-small.png"
-              alt="Ari - Elegant & Powerful Personal Website"
-              style={{ maxWidth: "380px", display: "block"}}
+              src="/img/aris-banner-small.png"
+              alt="Aris - Elegant & Powerful Personal Website"
+              style={{ maxWidth: "280px", display: "block", marginLeft:"auto", marginRight:"auto", paddingTop: "16px", paddingBottom: "8px"}}
             />
-            Ari - Serverless Personal Website  - 5min ⏱️
+            Aris - Powerful Serverless App (29$)
+          </Link>
+
+          <Link
+            className="button button--secondary button--lg"
+            style={{ textAlign: 'center', margin: "16px"}}
+            to="/docs/baris-a/intro">
+            <span style={{ display: "block", textDecoration: "underline", fontWeight: "bolder", width: "100%", textAlign: "left" }}><span style={{ color: "#2e8555"}}>Latest</span> product</span>
+            <img
+              src="/img/baris-a-banner-small.png"
+              alt="Aris - Elegant & Powerful Personal Website"
+              style={{ maxWidth: "280px", display: "block", marginLeft:"auto", marginRight:"auto", paddingTop: "16px", paddingBottom: "8px"}}
+            />
+            Baris-A - Serverless Template (19$)
           </Link>
         </div>
       </div>

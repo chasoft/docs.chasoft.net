@@ -1,0 +1,153 @@
+---
+sidebar_position: 30
+---
+
+import BrowserWindow from '@site/src/components/BrowserWindow';
+
+# FAQs
+
+Frequently asked questions about **`Aris`**
+
+<details>
+<summary>I get lost, I don't know what to do!</summary>
+
+Great to see you here! We can summarize all activities related to Aris as below:
+
+1. You [purchased Aris](https://store.chasoft.net/l/ari-elegant-and-powerful-serverless-website) 😘😍
+2. You [set up local development environment](./installation.md)
+3. You [update the configuration](./configuration.md) of the application 🔥 *(you would come back to this step to do updating your site's settings to fit your requirements and/or requirements)*.
+4. You take a look at [Aris' files structure](../advanced-guides/files-structure.mdx)
+5. You read all articles in [guides section](../../aris/guides)
+6. You start experimenting to update Aris locally 🔥 *(this would take a lot of time or if you want to avoid spending your time, then, contact me to spend your money 😅)*
+7. When you have any questions, try to find in our [documentation](../../aris), or ask me via [email](mailto:support@chasoft.net). Or if you need the highest support priority, you can check my subscription package [Telegram Support Channel for Aris](https://store.chasoft.net/l/telegram-support-channel-for-ari) which will allows you to ask for support via Telegram.
+8. Finally, you [deploy your website to Cloudflare](../guides/deployment.md) ✈🎉.
+
+I know that you would need many efforts. That's why we say *"**build** your website"*. When everything is well done. You need to update your website regularly and build your great online presence to support your business 💯 or personal interests 💯.
+
+Updating Aris is much more simple.
+
+1. Open Visual Studio Code
+2. Do the update: add new blog post, or new portfolio article, or new announcements, or new notes, or new updates.
+3. Run `npm run dev` to preview your changes locally.
+4. Go to `Source Control` panel *(Ctrl+Shift+G)* > for changes files, select all and choose `Stage changes` from popup menu > write some notes > Click `Commit` button to commit changes to local repository> Click `Sync Changes` button to upload changes to GitHub.
+
+That's all. When you **sync changes** to GitHub, Cloudflare Pages will automatically deploy your changes. Basically, you will need to deal with updating Aris and commit to GitHub. The deployment is automatic 😎⚡.
+
+</details>
+
+<details>
+<summary>Why must I use a `private GitHub` repository for Aris?</summary>
+
+**Aris is not an open-source software**. So, please kindly keep your GitHub repository be `private`, or your repository would be taken down by the [DCMA policy](https://en.wikipedia.org/wiki/Defense_Contract_Management_Agency) and your license would be rejected.
+
+</details>
+
+<details>
+<summary>Where can I deploy my Aris?</summary>
+
+**Aris** could be ported to run on any serverless platform _(thanks to [Remix Web Framework](https://remix.run/))_ such as:
+
+* AWS
+* Cloudflare worker
+* FlyIo
+* Netlify
+* Vercel
+* Any Express server
+
+but for the very first version of **Aris** _(1.x)_, we only support to deploy to **`Cloudflare Pages`**. The reason is that **Aris** (1.x) focus on `standalone spirit` and `affordable spirit`. You would have a powerful Serverless Personal Website for `FREE` when deploy to `Cloudflare Pages`
+
+In my experience, Cloudflare Pages is the best provider for such application as Aris.
+
+</details>
+
+<details>
+<summary>What do you mean when saying "Aris has a `centralized information`"?</summary>
+
+Aris has following dataType: `blog posts`, `portfolio`, `announcements`, `notes`, and `updates` which help you express almost everything you want as a personal website. And all data are all **connected** by 2 great features of Aris. They are: **`What's news?`** *(aka `latest updates`)* and **`Searching feature`** *(which can search for any data)*.
+
+`What's news?` is sometime called `centralized information`.
+
+</details>
+
+<details>
+<summary>How to get the `latitude` and `longitude` of a location?</summary>
+
+To mark the location on [the map](../guides/content-blocks.mdx#map), you must provide a `latitude` and `longitude` numbers.
+
+You can use Google Map and, select a location on the map and you will have the anchor
+
+<BrowserWindow
+  url={
+    <span>
+      .../Clarke+Quay/@
+      <span style={{ fontWeight: "bold", color: "red" }}>1.29105,103.8439817</span>
+      ,
+      <span style={{ fontWeight: "bold", color: "blue" }}>17</span>
+      z/data=!3m1!5s0x31...
+    </span>
+  }
+>
+
+<div style={{textAlign: 'center'}}>
+
+![How to get map location component](../guides/img/how-to-get-map-location.webp)
+
+</div>
+
+</BrowserWindow>
+
+```
+  anchor = [1.29105, 103.8439817]
+  zoom = 17
+```
+
+
+</details>
+
+<details>
+<summary>How to control `banner image` of each page?</summary>
+
+Let's take a look at a page, then you would know know to control `banner image`. Open `app\routes\__layout\contact.tsx`, go to `handle`.
+
+```ts
+...
+export const handle = {
+	bannerImage: bannerImages.contact
+}
+...
+```
+
+ You can see that the banner image of `https://your-domain.com/contact` is `bannerImages.contact`. Then, if you want to change its banner image, just go to `app\data\settings\bannerImages.tsx` and modify `bannerImages.contact`.
+
+ The inteface of bannerImage:
+
+ ```ts
+ export type BannerImage = {
+	/**
+	 * In case you don't want headerImage,
+	 * then, at that route, export handle with `disable = true`
+	 */
+	disable?: boolean
+	src: ImgSrcSet
+	/**
+	 * This setting is very useful,
+	 * feel free to ask me for any help
+	 * https://developer.mozilla.org/en-US/docs/Web/CSS/background-position
+	 */
+	objectPosition?: string,
+	backgroundColor?: string,
+	opacity?: string
+	height?: string
+	/**
+	 * if we want a title and a subTitle displayed above the image
+	 */
+	title?: {
+		text: string,
+		subText?: string,
+		color?: string
+		textCenter?: boolean
+	}
+}
+ ```
+
+</details>

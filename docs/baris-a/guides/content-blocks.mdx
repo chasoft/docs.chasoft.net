@@ -1,0 +1,1406 @@
+---
+sidebar_position: 70
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import BrowserWindow from '@site/src/components/BrowserWindow';
+
+# Content blocks
+
+Baris-A comes with many content blocks *(or designed blocks)* which helps you to present your data/information the way you want to.
+
+## address
+
+<details>
+
+<summary>Type declaration</summary>
+
+```ts
+{
+  type: "address"
+	data: {
+	  title?: string
+	  address: string
+  }
+}
+```
+
+</details>
+
+<Tabs>
+<TabItem value="Usage">
+
+```ts
+content: [
+  ...
+	{
+		type: "address",
+		data: {
+			title: "address",
+			address: "12 Orange Street, Suite 330"
+		}
+	},
+  ...
+]
+```
+
+</TabItem>
+<TabItem value="Screenshots">
+
+<div style={{textAlign: 'center'}}>
+
+Let you visit the demo page for all components at https://baris-a.chasoft.net/all
+
+</div>
+
+</TabItem>
+</Tabs>
+
+## breadcrumbs
+
+<details>
+
+<summary>Type declaration</summary>
+
+```ts
+{
+	type: "breadcrumbs",
+	data: Array<{
+	  title: string,
+	  slug?: string,
+	  icon?: React.ReactNode
+  }>
+},
+```
+
+</details>
+
+<Tabs>
+<TabItem value="Usage">
+
+```ts
+content: [
+  ...
+	{
+		type: "breadcrumbs",
+		data: [
+			{ title: "about", slug: "/about" },
+			{ title: "history" },
+		]
+	},
+  ...
+]
+```
+
+</TabItem>
+<TabItem value="Screenshots">
+
+<div style={{textAlign: 'center'}}>
+
+Let you visit the demo page for all components at https://baris-a.chasoft.net/all
+
+</div>
+
+</TabItem>
+</Tabs>
+
+## categoryGrid {#category-grid}
+
+<details>
+
+<summary>Type declaration</summary>
+
+```ts
+{
+	type: "categoryGrid",
+	data: Array<{
+			imgUrl: string,
+			title: string,
+			website?: string,
+			description?: string
+	}>,
+ }
+```
+
+</details>
+
+<Tabs>
+<TabItem value="Usage">
+
+```ts
+content: [
+  ...
+	{
+		type: "categoryGrid",
+		data: [
+			{
+				imgUrl: "/img/segments/travel.jpg",
+				title: "lu-hanh",
+				website: "https://website-domain.com",
+				description: "tour-du-lich-trong-va-ngoai-nuoc"
+			},
+			{
+				imgUrl: "/img/segments/villa.jpg",
+				title: "biet-thu",
+				website: "https://website-domain.com",
+				description: "biet-thu-du-lich-nha-nguyen-can"
+			},
+			{
+				imgUrl: "/img/segments/air-ticket.jpg",
+				title: "ve-may-bay",
+				website: "https://website-domain.com",
+				description: "ve-may-bay-trong-va-ngoai-nuoc"
+			},
+			{
+				imgUrl: "/img/segments/transportation.jpg",
+				title: "van-chuyen",
+				website: "https://website-domain.com",
+				description: "thue-xe-ve-xe-limousine"
+			},
+			{
+				imgUrl: "/img/segments/food.jpg",
+				title: "an-uong",
+				website: "https://website-domain.com",
+				description: "nha-hang-bbq-com-doan"
+			},
+			{
+				imgUrl: "/img/segments/hotel.jpg",
+				title: "khach-san",
+				website: "https://website-domain.com",
+				description: "khach-san-binh-dan"
+			},
+			{
+				imgUrl: "/img/segments/construction.jpg",
+				title: "xay-dung",
+				website: "https://website-domain.com",
+				description: "xay-dung-nha-o-biet-thu"
+			},
+			{
+				imgUrl: "/img/segments/construction-plan.jpg",
+				title: "tu-van-thiet-ke",
+				website: "https://website-domain.com",
+				description: "tu-van-thiet-ke-xay-dung"
+			},
+			{
+				imgUrl: "/img/segments/farmstay.jpg",
+				title: "farmstay",
+				website: "https://website-domain.com",
+				description: "farmstay-nha-vuon-du-lich"
+			},
+		]
+	}
+  ...
+]
+```
+
+</TabItem>
+<TabItem value="Screenshots">
+
+<div style={{textAlign: 'center'}}>
+
+Let you visit the demo page for all components at https://baris-a.chasoft.net/all
+
+</div>
+
+</TabItem>
+</Tabs>
+
+## contactForm {#contact-form}
+
+<details>
+
+<summary>Type declaration</summary>
+
+There is not type declaration
+
+</details>
+
+<Tabs>
+<TabItem value="Usage">
+
+```ts
+content: [
+  ...
+  {
+		type: "contactForm"
+	}
+  ...
+]
+```
+
+</TabItem>
+<TabItem value="Screenshots">
+
+<div style={{textAlign: 'center'}}>
+
+Let you visit the demo page for all components at https://baris-a.chasoft.net/all
+
+</div>
+
+</TabItem>
+</Tabs>
+
+## facts
+
+<details>
+
+<summary>Type declaration</summary>
+
+```ts
+{
+	type: "facts",
+	data: Array<{
+		quantity: number,
+		title: string,
+		imageUrl?: string
+	}>
+},
+```
+
+</details>
+
+<Tabs>
+<TabItem value="Usage">
+
+```ts
+content: [
+  ...
+	{
+		type: "facts",
+		data: [
+			{
+				quantity: 10,
+				title: "employees",
+				imageUrl: "/img/elements/icon-award.svg"
+			},
+			{
+				quantity: 250,
+				title: "projects",
+				imageUrl: "/img/elements/icon-award.svg"
+			},
+			{
+				quantity: 100,
+				title: "income",
+				imageUrl: "/img/elements/icon-award.svg"
+			},
+			{
+				quantity: 250,
+				title: "projects",
+				imageUrl: "/img/elements/icon-award.svg"
+			},
+			{
+				quantity: 100,
+				title: "income",
+				imageUrl: "/img/elements/icon-award.svg"
+			}
+		]
+	},
+  ...
+]
+```
+
+</TabItem>
+<TabItem value="Screenshots">
+
+<div style={{textAlign: 'center'}}>
+
+Let you visit the demo page for all components at https://baris-a.chasoft.net/all
+
+</div>
+
+</TabItem>
+</Tabs>
+
+## faqs
+
+<details>
+
+<summary>Type declaration</summary>
+
+```ts
+{
+	type: "faqs",
+	data: Array<{
+	  question: string
+	  answer: string
+	  expanded?: boolean
+	  additional?: {
+		  question?: string[]
+		  answer?: string[]
+	  }
+  }>
+},
+```
+
+</details>
+
+<Tabs>
+<TabItem value="Usage">
+
+```ts
+content: [
+  ...
+	{
+		type: "faqs",
+		data: [
+			{
+				question: "question-1",
+				answer: "Annual price is %s, we have lifetime packages only %s.",
+				expanded: true,
+				additional: {
+					answer: ["100", "999"]
+				}
+			},
+			{
+				question: "Hello %s, how is everything going?",
+				answer: "answer-2",
+				additional: {
+					question: ["Brian"]
+				}
+			},
+			{
+				question: "question-3",
+				answer: "answer-3"
+			},
+		]
+	},
+  ...
+]
+```
+
+</TabItem>
+<TabItem value="Screenshots">
+
+<div style={{textAlign: 'center'}}>
+
+Let you visit the demo page for all components at https://baris-a.chasoft.net/all
+
+</div>
+
+</TabItem>
+</Tabs>
+
+## headerBlock {#header-block}
+
+<details>
+
+<summary>Type declaration</summary>
+
+```ts
+{
+  type: "headerBlock",
+	data: {
+		title: string
+		description?: MarkdownText
+		rightText?: string
+		lang?: Language
+	}
+}
+```
+
+</details>
+
+<Tabs>
+<TabItem value="Usage">
+
+```tsx
+content: [
+  ...
+	{
+		type: "headerBlock",
+		data: {
+		title: "my-business-journey",
+			description: "Et ex nulla sint commodo non eu ea. Amet pariatur...",
+			rightText: "01"
+		}
+	},
+  ...
+]
+```
+
+</TabItem>
+<TabItem value="Screenshots">
+
+<div style={{textAlign: 'center'}}>
+
+[headerBlock](/)
+
+</div>
+
+</TabItem>
+</Tabs>
+
+## image
+
+<details>
+
+<summary>Type declaration</summary>
+
+```ts
+{
+	type: "image",
+	data: {
+		title: string,
+		src: {
+      mobile: string
+	    desktop?: string
+	    description?: string
+		},
+		rounded?: "sm" | "md" | "lg" | "xl" | "2xl"
+    wfull?: boolean
+	  hfull?: boolean
+	}
+},
+```
+
+</details>
+
+<Tabs>
+<TabItem value="Usage">
+
+```ts
+content: [
+  ...
+	{
+		type: "image",
+		data: {
+			title: "Jessica Alber",
+			src: {
+				mobile: "https://images.unsplash.com/photo-1482361046637-0226fdcfa3b7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=768&q=80"
+			},
+			rounded: "xl"
+		}
+	},
+  ...
+]
+```
+
+</TabItem>
+<TabItem value="Screenshots">
+
+<div style={{textAlign: 'center'}}>
+
+Let you visit the demo page for all components at https://baris-a.chasoft.net/all
+
+</div>
+
+</TabItem>
+</Tabs>
+
+## imageGrid {#image-grid}
+
+<details>
+
+<summary>Type declaration</summary>
+
+```ts
+{
+	type: "imageGrid",
+	data: Array<{
+	  title: string
+	  imgUrl: string
+	  slug?: string
+	}>
+},
+```
+
+</details>
+
+<Tabs>
+<TabItem value="Usage">
+
+```ts
+content: [
+  ...
+	{
+		type: "imageGrid",
+		data: [
+			{
+				title: "",
+				imgUrl: "https://img.icons8.com/stickers/344/chimney.png",
+				slug: "/about/resume"
+			},
+			{
+				title: "",
+				imgUrl: "https://img.icons8.com/stickers/344/flag-garland.png"
+			},
+			{
+				title: "",
+				imgUrl: "https://img.icons8.com/stickers/344/snowglobe.png"
+			},
+			{
+				title: "",
+				imgUrl: "https://img.icons8.com/stickers/344/cute-monster.png"
+			},
+			{
+				title: "",
+				imgUrl: "https://img.icons8.com/stickers/344/champagne.png"
+			},
+			{
+				title: "",
+				imgUrl: "https://img.icons8.com/stickers/344/heart-with-arrow.png"
+			},
+		]
+	},
+  ...
+]
+```
+
+</TabItem>
+<TabItem value="Screenshots">
+
+<div style={{textAlign: 'center'}}>
+
+Let you visit the demo page for all components at https://baris-a.chasoft.net/all
+
+</div>
+
+</TabItem>
+</Tabs>
+
+## links
+
+<details>
+
+<summary>Type declaration</summary>
+
+```ts
+{
+  type: "links",
+	data: Array<{
+    /**
+  	 * if you set a type for a link
+  	 * we will show an icon for the link (default icon)
+  	 * if you don't set imageUrl.
+  	 */
+	  type?: LinkMetaType
+	  title: string,
+	  description?: string
+	  slug: string,
+	  iconPicture?: string,
+	  decoration?: {
+  		/**
+  		 * we will fill gradient the background
+  		 * 1st & 2nd is background gradient
+  		 * 3rd is text-color
+  		 */
+	  	backgroundColor?: [string, string, string]
+		  isTextCenter?: boolean
+		  isBold?: boolean
+		  isItalic?: boolean
+		  isDownloadable?: boolean
+	  }
+  }>
+},
+```
+
+</details>
+
+<Tabs>
+<TabItem value="Usage">
+
+```ts
+content: [
+  ...
+  {
+    type: "links",
+    data: [
+      {
+        type: undefined,
+        title: "upcoming-events",
+        description: "upcoming-events-description",
+        slug: "/links",
+        iconPicture: undefined
+      },
+      {
+        type: "zip",
+        title: "frequently-asked-questions",
+        description: "frequently-asked-questions-description",
+        slug: "/faqs",
+        iconPicture: undefined,
+        decoration: {
+          backgroundColor: ["blue", "red", "white"]
+        }
+      },
+      {
+        type: "xls",
+        title: "50%-discount-voucher",
+        description: "get-your-discount-for-october",
+        slug: "/home-links",
+        iconPicture: undefined,
+        decoration: {
+          isBold: true,
+          isItalic: true
+        }
+      },
+      {
+        type: "youtube",
+        title: "learn-js-in-3-hours",
+        slug: "/a-song",
+        iconPicture: undefined,
+        decoration: {
+          isItalic: true
+        }
+      },
+      {
+        type: "cv",
+        title: "Modeling and Control of Modern Electrical Energy Systems",
+        description: "PDF, EPUB",
+        slug: "/tengyart-8VHtAr2LSWE-unsplash.jpg",
+        iconPicture: "/img/background/placeholder.svg",
+        decoration: {
+          isDownloadable: true
+        }
+      },
+    ]
+  },
+  ...
+]
+```
+
+</TabItem>
+<TabItem value="Screenshots">
+
+<div style={{textAlign: 'center'}}>
+
+Let you visit the demo page for all components at https://baris-a.chasoft.net/all
+
+</div>
+
+</TabItem>
+</Tabs>
+
+## list
+
+<details>
+
+<summary>Type declaration</summary>
+
+```ts
+{
+	type: "list",
+	data: Array<{
+    title: string
+	  value: string
+	  slug?: string
+  }>
+},
+```
+
+</details>
+
+<Tabs>
+<TabItem value="Usage">
+
+```ts
+content: [
+  ...
+	{
+		type: "list",
+		data: [
+			{
+				title: "React Official Tutorial",
+				slug: "https://reactjs.org/tutorial/tutorial.html",
+				value: "General Tutorials"
+			},
+			{
+				title: "React Hooks",
+				slug: "https://reactjs.org/docs/hooks-intro.html",
+				value: "React Hooks"
+			},
+			{
+				title: "JSX in TypeScript",
+				value: "TypeScript"
+			},
+			{
+				title: "React Optimizing Performance",
+				value: "React Performance"
+			},
+			{
+				title: "Reconciliation",
+				value: "React Internals"
+			},
+			{
+				title: "13 Essential React Interview Questions",
+				value: "React Interview Questions"
+			},
+			{
+				title: "CodePen",
+				slug: "https://reactjs.org/redirect-to-codepen/hello-world",
+				value: "React Online Playgrounds"
+			}
+		]
+	},
+  ...
+]
+```
+
+</TabItem>
+<TabItem value="Screenshots">
+
+<div style={{textAlign: 'center'}}>
+
+Let you visit the demo page for all components at https://baris-a.chasoft.net/all
+
+</div>
+
+</TabItem>
+</Tabs>
+
+## map
+
+<details>
+
+<summary>Type declaration</summary>
+
+```ts
+{
+	type: "map",
+	data: {
+    defaultZoom?: number
+    defaultCenter?: [number, number]
+    /**
+    * the first marker in the list could be activated as `always onhover`
+    */
+    markers: Array<{
+      anchor: [number, number]
+      title?: string
+      description?: string
+      slug?: string
+      color?: string
+      width?: number
+      isDefault?: boolean
+    }>
+	}
+}
+```
+
+</details>
+
+<Tabs>
+<TabItem value="Usage">
+
+```ts
+content: [
+  ...
+  {
+		type: "map",
+		data: {
+			defaultCenter: [10.8161863, 106.7782831],
+			defaultZoom: 16,
+			markers: [
+				{
+					anchor: [10.8119658, 106.7759439],
+					slug: "/blog/labore-nisi-cillum-voluptate-consequat-reprehenderit-laborum-deserunt-exercitation",
+					title: "Location 1",
+					description: "Esse consequat sunt aliqua exercitation consectetur aute amet et consequat velit voluptate."
+				},
+				{
+					anchor: [10.8161863, 106.7782831],
+					color: "red",
+					slug: "/blog/minim-sunt-velit-do-veniam-velit",
+					title: "Location 2",
+					description: "Ea duis pariatur officia enim officia nostrud elit ullamco."
+				},
+				{
+					anchor: [10.8172676, 106.7824432],
+					color: "green",
+					slug: "/portfolio/incididunt-eu-lorem-ut-in-proident-labore-voluptate",
+					title: "Location 3",
+					description: "Voluptate ipsum magna sit nostrud incididunt laborum."
+				},
+			]
+		}
+	}
+  ...
+]
+```
+
+</TabItem>
+<TabItem value="Screenshots">
+
+<div style={{textAlign: 'center'}}>
+
+Let you visit the demo page for all components at https://baris-a.chasoft.net/all
+
+</div>
+
+</TabItem>
+</Tabs>
+
+## quoteBlock {#quote-block}
+
+<details>
+
+<summary>Type declaration</summary>
+
+```ts
+{
+	type: "quoteBlock",
+	data: {
+		text: string
+		author?: string
+		isTop?: boolean
+		lang?: Language
+	}
+},
+```
+
+</details>
+
+<Tabs>
+<TabItem value="Usage">
+
+```ts
+content: [
+  ...
+	{
+		type: "quoteBlock",
+  	data: {
+			text: "robert-quote",
+			author: "Robert Theobald"
+		}
+	},
+  ...
+]
+```
+
+</TabItem>
+<TabItem value="Screenshots">
+
+<div style={{textAlign: 'center'}}>
+
+Let you visit the demo page for all components at https://baris-a.chasoft.net/all
+
+</div>
+
+</TabItem>
+</Tabs>
+
+## Resume
+
+### resume.experience {#resume-experience}
+
+<details>
+
+<summary>Type declaration</summary>
+
+```ts
+{
+	type: "resume.experience"
+	data: Array<{
+    logoUrl: string
+    jobTitle: string
+    companyName: string
+    location: string
+    contractType: "full-time" | "part-time" | "freelance"
+    startDate: string
+    endDate: string
+    description: MarkdownText
+  }>
+}
+```
+
+</details>
+
+<Tabs>
+<TabItem value="Usage">
+
+```ts
+content: [
+  ...
+  {
+		type: "resume.experience",
+		data: [
+			{
+				logoUrl: "/img/background/placeholder.svg",
+				jobTitle: "senior-developer",
+				companyName: "Twitter",
+				location: "London",
+				contractType: "full-time",
+				startDate: "June 2019",
+				endDate: "present",
+				description: "twitter-description",
+			},
+			{
+				logoUrl: "/img/background/placeholder.svg",
+				jobTitle: "middle-developer",
+				companyName: "Dropbox",
+				location: "London",
+				contractType: "part-time",
+				startDate: "April 2018",
+				endDate: "June 2019",
+				description: "dropbox-description",
+			},
+			{
+				logoUrl: "/img/background/placeholder.svg",
+				jobTitle: "junior-developer",
+				companyName: "Blogger",
+				location: "London",
+				contractType: "full-time",
+				startDate: "December 2017",
+				endDate: "March 2018",
+				description: "blogger-description",
+			},
+		]
+	},
+  ...
+]
+```
+
+</TabItem>
+<TabItem value="Screenshots">
+
+<div style={{textAlign: 'center'}}>
+
+Let you visit the demo page for all components at https://baris-a.chasoft.net/all
+
+</div>
+
+</TabItem>
+</Tabs>
+
+
+### resume.education {#resume-education}
+
+<details>
+
+<summary>Type declaration</summary>
+
+```ts
+{
+	type: "resume.education"
+	data: Array<{
+   	logoUrl: string
+    major: string
+    schoolName: string
+    location: string
+    startDate: string
+    endDate: string
+  }>
+}
+```
+
+</details>
+
+<Tabs>
+<TabItem value="Usage">
+
+```ts
+content: [
+  ...
+  {
+		type: "resume.education",
+		data: [
+			{
+				logoUrl: "https://logospng.org/download/harvard-university/logo-harvard-university-brasao-256.png",
+				major: "master-in-software-engineering",
+				schoolName: "brunel-university",
+				location: "London",
+				startDate: "Sep 2017",
+				endDate: "May 2019",
+			},
+			{
+				logoUrl: "https://logospng.org/download/harvard-university/logo-harvard-university-brasao-256.png",
+				major: "master-in-software-engineering",
+				schoolName: "brunel-university",
+				location: "London",
+				startDate: "Sep 2013",
+				endDate: "May 2017",
+			}
+		]
+	},
+  ...
+]
+```
+
+</TabItem>
+<TabItem value="Screenshots">
+
+<div style={{textAlign: 'center'}}>
+
+Let you visit the demo page for all components at https://baris-a.chasoft.net/all
+
+</div>
+
+</TabItem>
+</Tabs>
+
+## Telephone & Emails {#telephone-email-block}
+
+### telephone
+
+<details>
+
+<summary>Type declaration</summary>
+
+```ts
+{
+	type: "telephone"
+	data: Array<{
+  	name: string
+  	numbers: string[]
+  }>
+}
+```
+
+</details>
+
+<Tabs>
+<TabItem value="Usage">
+
+```ts
+content: [
+  ...
+  {
+		type: "telephone",
+		data: [
+			{
+				name: "Office",
+				numbers: ["0984554895", "0888007600"]
+			},
+			{
+				name: "Personal",
+				numbers: ["0984554895", "0888007600"]
+			}
+  	]
+	}
+  ...
+]
+```
+
+</TabItem>
+<TabItem value="Screenshots">
+
+<div style={{textAlign: 'center'}}>
+
+Let you visit the demo page for all components at https://baris-a.chasoft.net/all
+
+</div>
+
+</TabItem>
+</Tabs>
+
+### email
+
+<details>
+
+<summary>Type declaration</summary>
+
+```ts
+{
+	type: "email"
+	data: Array<{
+    icon: "email" | "work" | "personal"
+    email: string
+  }>
+}
+```
+
+</details>
+
+<Tabs>
+<TabItem value="Usage">
+
+```ts
+content: [
+  ...
+  {
+		type: "email",
+		data: [
+			{
+				icon: "email",
+				email: "cao@anh.pw"
+			},
+			{
+				icon: "work",
+				email: "anhch@chasoft.net"
+			}
+		]
+	}
+  ...
+]
+```
+
+</TabItem>
+<TabItem value="Screenshots">
+
+<div style={{textAlign: 'center'}}>
+
+Let you visit the demo page for all components at https://baris-a.chasoft.net/all
+
+</div>
+
+</TabItem>
+</Tabs>
+
+### email-telephone {#telephone-email}
+
+<details>
+
+<summary>Type declaration</summary>
+
+```ts
+{
+	type: "telephone-email" | "email-telephone"
+	data: {
+		email: Array<{
+      icon: "email" | "work" | "personal"
+      email: string
+    }>
+		telephone: Array<{
+      name: string
+      numbers: string[]
+    }>
+	}
+}
+```
+
+</details>
+
+<Tabs>
+<TabItem value="Usage">
+
+```ts
+content: [
+  ...
+  {
+		type: "telephone-email",
+		data: {
+			telephone: [
+				{
+					name: "Office",
+					numbers: ["0984554895", "0888007600"]
+				},
+				{
+					name: "Personal",
+					numbers: ["0984554895", "0888007600"]
+				}
+			],
+			email: [
+				{
+					icon: "email",
+					email: "cao@anh.pw"
+				},
+				{
+					icon: "work",
+					email: "anhch@chasoft.net"
+				}
+			]
+		}
+	}
+  ...
+]
+```
+
+</TabItem>
+<TabItem value="Screenshots">
+
+<div style={{textAlign: 'center'}}>
+
+Let you visit the demo page for all components at https://baris-a.chasoft.net/all
+
+</div>
+
+</TabItem>
+</Tabs>
+
+## text
+
+<details>
+
+<summary>Type declaration</summary>
+
+```ts
+{
+	type: "text"
+	data: MarkdownText
+	compact?: boolean
+	lang?: Language
+}
+```
+
+</details>
+
+<Tabs>
+<TabItem value="Usage">
+
+```ts
+content: [
+  ...
+	{
+		type: "text",
+		compact: false,
+		data:
+`
+> Nisi pariatur velit velit veniam laboris mollit anim irure cupidatat quis consectetur eiusmod reprehenderit occaecat.
+
+## Esse aute esse quis officia.
+
+Laboris ullamco aliquip consequat exercitation culpa excepteur consectetur.
+Voluptate eu fugiat proident.
+`
+	}
+  ...
+]
+```
+
+</TabItem>
+<TabItem value="Screenshots">
+
+<div style={{textAlign: 'center'}}>
+
+Let you visit the demo page for all components at https://baris-a.chasoft.net/all
+
+</div>
+
+</TabItem>
+</Tabs>
+
+## textBlock {#text-block}
+
+<details>
+
+<summary>Type declaration</summary>
+
+```ts
+{
+	type: "textBlock"
+	data: {
+		text: MarkdownText
+		slug?: string
+		lang?: Language
+	}
+}
+```
+
+</details>
+
+<Tabs>
+<TabItem value="Usage">
+
+```ts
+content: [
+  ...
+	{
+		type: "textBlock",
+		data: {
+			text: "✈ Exercitation 🏨 Velit 🚌 Deserunt 📐 Laborum 🏗 Sint",
+			slug: "/"
+		}
+  },
+  ...
+]
+```
+
+</TabItem>
+<TabItem value="Screenshots">
+
+<div style={{textAlign: 'center'}}>
+
+Let you visit the demo page for all components at https://baris-a.chasoft.net/all
+
+</div>
+
+</TabItem>
+</Tabs>
+
+## video
+
+<details>
+
+<summary>Type declaration</summary>
+
+```ts
+{
+	type: "video"
+	data: {
+		src: string
+		autoPlay: boolean
+		loop: boolean
+		muted: boolean
+	}
+}
+```
+
+</details>
+
+<Tabs>
+<TabItem value="Usage">
+
+```ts
+content: [
+  ...
+  {
+    type: "video"
+    data: {
+      src: "/video/intro.mp4"
+      autoPlay: false
+      loop: true
+      muted: true
+    }
+  }
+  ...
+]
+```
+
+</TabItem>
+<TabItem value="Screenshots">
+
+<div style={{textAlign: 'center'}}>
+
+Let you visit the demo page for all components at https://baris-a.chasoft.net/all
+
+</div>
+
+</TabItem>
+</Tabs>
+
+## youtube
+
+<details>
+
+<summary>Type declaration</summary>
+
+```ts
+{
+	type: "youtube"
+	data: {
+		id: string
+		title: string
+		playlistCoverId?: string
+	}
+}
+```
+
+</details>
+
+<Tabs>
+<TabItem value="Usage">
+
+```ts
+content: [
+  ...
+  {
+		type: "youtube",
+		data: {
+			id:"BPgEgaPk62M",
+			title: "Ariana Grande - One Last Time (Official)",
+		}
+	},
+  ...
+]
+```
+
+</TabItem>
+<TabItem value="Screenshots">
+
+<div style={{textAlign: 'center'}}>
+
+Let you visit the demo page for all components at https://baris-a.chasoft.net/all
+
+</div>
+
+</TabItem>
+</Tabs>
