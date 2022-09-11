@@ -2,11 +2,26 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://docs.chasoft.net/blog</id>
     <title>Chasoft Labs Blog</title>
-    <updated>2022-08-26T12:00:00.000Z</updated>
+    <updated>2022-09-11T11:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://docs.chasoft.net/blog"/>
     <subtitle>Chasoft Labs Blog</subtitle>
     <icon>https://docs.chasoft.net/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Technical Stack for upcoming updates and new products]]></title>
+        <id>technical-stack-for-upcoming-updates-and-new-products</id>
+        <link href="https://docs.chasoft.net/blog/technical-stack-for-upcoming-updates-and-new-products"/>
+        <updated>2022-09-11T11:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Hello all,]]></summary>
+        <content type="html"><![CDATA[<p>Hello all,</p><p>For the very first version of <strong><a href="http://store.chasoft.net/l/ari-elegant-and-powerful-serverless-website" target="_blank" rel="noopener noreferrer">Aris</a></strong> and <strong><a href="http://store.chasoft.net/l/baris-a-serverless-template-for-personal-website" target="_blank" rel="noopener noreferrer">Baris-A</a></strong>, they do not use database. It is great for speed and your learning new technology and to make your hands dirty with codes. These would be great experiences for those who love to learn, to hand-on with new <!-- --> technologies.</p><p>That would be limited to a group of people only. My next journey to creating web/apps for personal is to use database but with caring chosen solutions which brings speed, stability and as lowest cost as possible.</p><p>Today, I would like to announce a technical stack which Chasoft Labs is going to conquer.</p><ol><li>Serverless Hosting ☁ <a href="https://pages.cloudflare.com/" target="_blank" rel="noopener noreferrer">Cloudflare Pages</a></li><li>Caching for DB fetching ⚡ <a href="https://www.cloudflare.com/products/workers-kv/" target="_blank" rel="noopener noreferrer">Cloudflare KV</a></li><li>Database 💾 <a href="https://airtable.com/" target="_blank" rel="noopener noreferrer">Airtable</a></li></ol><p>Why do we have number 2 (caching)? Because all free solutions have their limits in marking requests. In this case, Airtable's API is limited to only 5 requests per second, per base. The caching solutions would help to increase our ability to serve more visitors with better speed.</p><p>These great combinations would bring us much more confident to release better and better products.</p><p>Thank you &amp; Happy day to everyone!</p><p>Regards,
+Brian Cao
+2022-Sep-11</p>]]></content>
+        <author>
+            <name>Brian Cao</name>
+            <uri>https://github.com/chasoft</uri>
+        </author>
+        <category label="stack" term="stack"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Is Aris your choice to start a personal website]]></title>
         <id>is-ari-your-choice-to-start-a-personal-website</id>
